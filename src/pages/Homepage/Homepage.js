@@ -2,7 +2,7 @@ import React from 'react'
 import './Homepage.css'
 const Homepage = () => {
   return (
-    <div>Roots website</div>
+    <h1>Roots website</h1>
   )
 }
 
