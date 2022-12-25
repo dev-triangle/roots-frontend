@@ -1,8 +1,11 @@
 import React from 'react'
 import './Homepage.css'
+import MainLayout from '../../components/MainLayout/MainLayout'
 const Homepage = () => {
   return (
-    <h1>Roots website</h1>
+    <MainLayout>
+      Landing Page here
+    </MainLayout>
   )
 }
 
