@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Rock+Salt&display=swap');
+
+.home_container{
+   
+   width: 100%;
+    min-height: 100vh;
+ background-color: #462727;
+  background-size: cover;
+  
+  background-image: url('C:\Users\hp\Documents\roots-frontend\src\Bgroot.png');
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+      
+
+.home_title{
+color: #ffffff;
+font-size: 128px;
+margin-left: 1.2em;
+
+
+
+}
+
+.home_intro{ 
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 23px;
+line-height: 27px;
+width: 732px;
+height: 85px;
+color: #ffffff;
+margin-left: 150px;
+
+
+
+
+}
+/* .home_button{
+    border: none;
+    background: #c4b31b;    
+    border-radius: 71px;
+    color: #10293a;
+    height: 2.25rem;
+    width: 6.5rem;
+    padding: .5rem;
+    left: 309px;
+    display: flex;
+    flex-direction: column;
+    
+} */
+
+.home_button  {
+    border: none;
+    background:  #006DD1;
+    border-radius: 12px;
+    color: #bcd3e2;
+    height: 45px;
+    width: 130px;
+    padding:0.75rem;
+    font-display: center;
+    font-weight: bold;
+    margin-left: 150px;
+}
+.Font {
+    font-family: 'Rock Salt', cursive ;
+}
