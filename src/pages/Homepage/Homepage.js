@@ -2,10 +2,10 @@ import React from 'react'
 import './Homepage.css'
 import { FaArrowRight } from "react-icons/fa";
 
-//import MainLayout from '../../components/MainLayout/MainLayout'
+import MainLayout from '../../components/MainLayout/MainLayout'
 const Homepage = () => {
   return (
-    //<MainLayout>
+    <MainLayout>
     <div className='home_container'>
       <div className='home_content'>
      <div className='home_title'><span className='Font'>R</span>OOT<span className='Font'>S</span></div>
@@ -14,7 +14,7 @@ const Homepage = () => {
        <div className='home_button'>EXPLORE<i className='arrow_icon'>&nbsp; &nbsp;<FaArrowRight/></i></div>
        </div>
     </div>
-    //</MainLayout>
+    </MainLayout>
   )
 }
 
