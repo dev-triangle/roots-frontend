@@ -7,6 +7,7 @@ const Navbar = () => {
 
 
   return (
+
     // <div>
       
     //     <ul>
@@ -47,6 +48,7 @@ const Navbar = () => {
       <Link to='/guides'> <p><a href="#guides">Guides</a></p></Link>
       <Link to='/signup'><p><a href="login">Login</a></p></Link>
       </div>
+>>>>>>> f3a332e623ad5621d8689e471495639893a00124
     </div>
     <div className="home__navbar-sign">
       <p>Sign in</p>

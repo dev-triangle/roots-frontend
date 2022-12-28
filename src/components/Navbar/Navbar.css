@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items:flex-end;
 
-    padding: 2rem 6rem;
+    padding: 2rem 4rem;
 }
 
 .home__navbar-links {
@@ -28,7 +28,7 @@
 .home__navbar-links_container p,
 .home__navbar-sign p,
 .home__navbar-menu_container p {
-    color: #fff;
+  
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 18px;
@@ -78,7 +78,7 @@
     right: 0;
     top: 40px;
     margin-top: 1rem;
-    min-width: 210px;
+    min-width: 100px;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);
 }
@@ -117,7 +117,7 @@
     }
 
     .home__navbar-menu_container {
-        top: 20px;
+        top: 1em;
     }
 
     .home__navbar-menu_container-links-sign {
