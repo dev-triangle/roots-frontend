@@ -1,42 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Rock+Salt&display=swap');
 
 .home_container{
-   
-   width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
     min-height: 100vh;
- background-color: #462727;
-  background-size: cover;
-  
-  background-image: url('../../assets/png/Bgroot.png');
-  display: flex;
-  justify-content: left;
-  align-items: center;
+    background-color: #462727;
+    background-size: cover; 
+    background-image: url('C:\Users\hp\Documents\roots-frontend\src\images\Bgroot.png');
 }
       
 
 .home_title{
-color: #ffffff;
-font-size: 128px;
-margin-left: 1.2em;
-
-
-
+    font-size: 128px;
+    margin-left: 1.2em;
+    color: #ffffff;
 }
 
 .home_intro{ 
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 23px;
-line-height: 27px;
-width: 732px;
-height: 85px;
-color: #ffffff;
-margin-left: 150px;
-
-
-
-
+    font-family:'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 27px;
+    width: 732px;
+    height: 85px;
+    color: #ffffff;
+    margin-left: 150px;
 }
 /* .home_button{
     border: none;
