@@ -1,0 +1,170 @@
+.guide_main{
+    background:linear-gradient(104.98deg, #0C1E27 2%, #2A4E64  93.54%); 
+    width:100%;
+    height:100% ;
+    min-height: 100vh;
+}
+.guide_img{
+    
+position: absolute;
+width: 700px;
+height: 1080px;
+left: 0px;
+top: 0px;
+
+background-image: url(https://www.goingthewholehogg.com/wp-content/uploads/Travel-Photography-Gear-Header.jpg);
+opacity: 0.4;
+}
+.g_heading{
+    position: absolute;
+width: 342px;
+height: 51px;
+left: 830px;
+top: 135px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 51px;
+letter-spacing: 0.01em;
+color: #FFFFFF;
+}
+.g_container{
+box-sizing: border-box;
+position: absolute;
+width: 421px;
+height: 340px;
+left: 830px;
+top: 220px;
+border: 1px dashed #FFFFFF;
+border-radius: 25px;
+}
+.gu_input1{
+  position: absolute;  
+width: 310px;
+height: 30px;
+left: 50px;
+top: 50px;
+
+border: 3px solid #494747;
+border-radius: 4px;
+}
+.gu_input2{
+    position: absolute;  
+  width: 310px;
+  height: 30px;
+  left: 50px;
+  top: 90px;
+  
+  border: 3px solid #494747;
+  border-radius: 4px;
+  }
+  .gu_input3{
+    position: absolute;  
+  width: 140px;
+  height: 30px;
+  left: 50px;
+  top: 130px;
+  
+  border: 3px solid #494747;
+  border-radius: 4px;
+  }
+  .gu_input4{
+    position: absolute;  
+  width: 140px;
+  height: 30px;
+  left: 210px;
+  top: 130px;
+  
+  border: 3px solid #494747;
+  border-radius: 4px;
+  }  
+  .gu_input6{
+    position: absolute;  
+  width: 140px;
+  height: 30px;
+  left: 210px;
+  top: 170px;
+  
+  border: 3px solid #494747;
+  border-radius: 4px;
+  } 
+  .gu_input5{
+    position: absolute;  
+  width: 140px;
+  height: 30px;
+  left: 50px;
+  top: 170px;
+  
+  border: 3px solid #494747;
+  border-radius: 4px;
+  }
+.g_button{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 17px 66px;
+gap: 10px;
+position: absolute;
+width: 318px;
+height: 60px;
+left: 50px;
+top: 220px;
+background: #006360;
+border-radius: 5px;
+border-color: #FFFFFF;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 26px;
+letter-spacing: 0.01em;
+color: #FFFFFF;
+}  
+.g_dot1{
+    position: absolute;
+width: 21px;
+height: 21px;
+left: 52px;
+top: 20px;
+border-radius: 1em;
+border: 1px solid #FFFFFF;
+}
+.gl_dot1{
+    position: absolute;
+    width: 89px;
+    height: 30px;
+    left: 80px;
+    top: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+.g_dot2{
+    position: absolute;
+width: 21px;
+height: 21px;
+left: 202px;
+top: 20px;
+border-radius: 1em;
+border: 1px solid #FFFFFF;
+}
+.gl_dot2{
+    position: absolute;
+    width: 89px;
+    height: 30px;
+    left: 230px;
+    top: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
