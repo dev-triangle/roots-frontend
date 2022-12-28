@@ -16,7 +16,7 @@ background-size: cover;
 }
 
 .g_heading{
-    position: absolute;
+    position: relative;
 width: 342px;
 height: 51px;
 left: 830px;
@@ -31,21 +31,26 @@ color: #FFFFFF;
 }
 .g_container{
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   width: 421px;
   height: 340px;
-  left: 830px;
-  top: 220px;
-  border: 5px dashed #FFFFFF;
-  border-radius: 25px;
-  border-width: 2px;
+  margin: 12rem 52rem;
+  border-radius: 0.5rem;
+  background-image: repeating-linear-gradient(180deg, #ffffff, #ffffff 14px, transparent 14px, transparent 22px, #ffffff 22px), repeating-linear-gradient(270deg, #ffffff, #ffffff 14px, transparent 14px, transparent 22px, #ffffff 22px), repeating-linear-gradient(0deg, #ffffff, #ffffff 14px, transparent 14px, transparent 22px, #ffffff 22px), repeating-linear-gradient(90deg, #ffffff, #ffffff 14px, transparent 14px, transparent 22px, #ffffff 22px);
+background-size: 1px calc(100% + 22px), calc(100% + 22px) 1px, 1px calc(100% + 22px) , calc(100% + 22px) 1px;
+background-position: 0 0, 0 0, 100% 0, 0 100%;
+background-repeat: no-repeat;
+  padding: 20px 20px 20px 20px;
+
+
   }
+ 
+
 .gu_input1{
-  position: absolute;  
+  position: relative;  
 width: 310px;
 height: 30px;
-left: 50px;
-top: 50px;
+margin: 2rem 2rem;
 background: transparent;
 border: 3px solid #494747;
 border-radius: 4px;
@@ -53,67 +58,60 @@ border-radius: 4px;
 
 }
 .gu_input2{
-    position: absolute;  
+    position: relative;  
   width: 310px;
   height: 30px;
-  left: 50px;
-  top: 90px;
+  margin: 0rem 2rem;
   background: transparent;
   border: 3px solid #494747;
   border-radius: 4px;
   }
   .gu_input3{
-    position: absolute;  
+    position: relative;  
   width: 140px;
   height: 30px;
-  left: 50px;
-  top: 130px;
+ margin: 1rem 2rem;
   background: transparent;
   border: 3px solid #494747;
   border-radius: 4px;
   }
   .gu_input4{
-    position: absolute;  
+    position: relative;  
   width: 140px;
   height: 30px;
-  left: 210px;
-  top: 130px;
+ margin: 1rem 0rem;
   background: transparent;
   border: 3px solid #494747;
   border-radius: 4px;
   }  
   .gu_input6{
-    position: absolute;  
+    position: relative;  
   width: 140px;
   height: 30px;
-  left: 210px;
-  top: 170px;
+  margin: 1rem 0rem;
   background: transparent;
   border: 3px solid #494747;
   border-radius: 4px;
   } 
   .gu_input5{
-    position: absolute;  
+    position: relative;  
   width: 140px;
   height: 30px;
-  left: 50px;
-  top: 170px;
+  margin: 1rem 2rem;
   background: transparent;
   border: 3px solid #494747;
   border-radius: 4px;
   }
 .g_button{
-    display: flex;
+display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-padding: 17px 66px;
-gap: 10px;
-position: absolute;
-width: 318px;
-height: 60px;
-left: 50px;
-top: 220px;
+padding: 12px 40px;
+position: relative;
+width: 19.5rem;
+height: 3rem;
+margin: 0rem 2rem;
 background: #006360;
 border-radius: 5px;
 border-color: #FFFFFF;
