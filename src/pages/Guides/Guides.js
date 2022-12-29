@@ -1,10 +1,11 @@
 import React from 'react'
+import MainLayout from '../../components/MainLayout/MainLayout'
 import './Guides.css'
 
 const Guides = () => {
   return (
    
-  
+  <MainLayout>
 
     <div className='guide_main'>
       
@@ -26,6 +27,7 @@ const Guides = () => {
          <button className='g_button'>Search Available Flights</button>
         </div>
     </div>
+    </MainLayout>
   )
 }
 
