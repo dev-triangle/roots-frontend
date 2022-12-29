@@ -1,10 +1,13 @@
 import React from 'react'
+import MainLayout from '../../components/MainLayout/MainLayout'
 // import MainLayout from '../../components/MainLayout/MainLayout'
 // import { Link } from 'react-router-dom'
 import './Contact.css'
 const Contact = () => {
   return (
+    <MainLayout>
     <div>
+
      <React.Fragment>
       <section>
         <div className='page1   '>
@@ -32,6 +35,7 @@ const Contact = () => {
       </section>
      </React.Fragment>
     </div>
+    </MainLayout>
   )
 }
 
