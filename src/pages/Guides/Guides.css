@@ -31,17 +31,6 @@ letter-spacing: 0.01em;
 color: #FFFFFF;
 }
 .g_container{
-<<<<<<< HEAD
-box-sizing: border-box;
-position: absolute;
-width: 421px;
-height: 340px;
-left: 830px;
-top: 220px;
-border: 1px dashed #FFFFFF;
-border-radius: 25px;
-}
-=======
   box-sizing: border-box;
   position: relative;
   width: 421px;
@@ -58,19 +47,12 @@ background-repeat: no-repeat;
   }
  
 
->>>>>>> f26090fa6f9cf1c107c579f0c0f4d5b8bef5bf63
 .gu_input1{
   position: relative;  
 width: 310px;
 height: 30px;
-<<<<<<< HEAD
-left: 50px;
-top: 50px;
-
-=======
 margin: 2rem 2rem;
 background: transparent;
->>>>>>> f26090fa6f9cf1c107c579f0c0f4d5b8bef5bf63
 border: 3px solid #494747;
 border-radius: 4px;
 }
@@ -78,14 +60,8 @@ border-radius: 4px;
     position: relative;  
   width: 310px;
   height: 30px;
-<<<<<<< HEAD
-  left: 50px;
-  top: 90px;
-  
-=======
   margin: 0rem 2rem;
   background: transparent;
->>>>>>> f26090fa6f9cf1c107c579f0c0f4d5b8bef5bf63
   border: 3px solid #494747;
   border-radius: 4px;
   }
@@ -93,14 +69,8 @@ border-radius: 4px;
     position: relative;  
   width: 140px;
   height: 30px;
-<<<<<<< HEAD
-  left: 50px;
-  top: 130px;
-  
-=======
  margin: 1rem 2rem;
   background: transparent;
->>>>>>> f26090fa6f9cf1c107c579f0c0f4d5b8bef5bf63
   border: 3px solid #494747;
   border-radius: 4px;
   }
@@ -108,14 +78,8 @@ border-radius: 4px;
     position: relative;  
   width: 140px;
   height: 30px;
-<<<<<<< HEAD
-  left: 210px;
-  top: 130px;
-  
-=======
  margin: 1rem 0rem;
   background: transparent;
->>>>>>> f26090fa6f9cf1c107c579f0c0f4d5b8bef5bf63
   border: 3px solid #494747;
   border-radius: 4px;
   }  
@@ -123,14 +87,8 @@ border-radius: 4px;
     position: relative;  
   width: 140px;
   height: 30px;
-<<<<<<< HEAD
-  left: 210px;
-  top: 170px;
-  
-=======
   margin: 1rem 0rem;
   background: transparent;
->>>>>>> f26090fa6f9cf1c107c579f0c0f4d5b8bef5bf63
   border: 3px solid #494747;
   border-radius: 4px;
   } 
@@ -138,14 +96,8 @@ border-radius: 4px;
     position: relative;  
   width: 140px;
   height: 30px;
-<<<<<<< HEAD
-  left: 50px;
-  top: 170px;
-  
-=======
   margin: 1rem 2rem;
   background: transparent;
->>>>>>> f26090fa6f9cf1c107c579f0c0f4d5b8bef5bf63
   border: 3px solid #494747;
   border-radius: 4px;
   }
