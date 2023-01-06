@@ -5,7 +5,9 @@ import MainLayout from '../../components/MainLayout/MainLayout'
 import './Contact.css'
 const Contact = () => {
   return (
+    <MainLayout>
     <div>
+
      <React.Fragment>
       <section>
         <div className='page1   '>
@@ -33,6 +35,7 @@ const Contact = () => {
       </section>
      </React.Fragment>
     </div>
+    </MainLayout>
   )
 }
 

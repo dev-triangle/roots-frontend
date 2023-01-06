@@ -1,8 +1,9 @@
-
-.contact__main{
-    min-width: 100vw;
+.page{
+  
+    width: 50%;
+    height: 50%;
+    background:linear-gradient(104.98deg, #3B5B6F,#2F4958);
     min-height: 100vh;
-    overflow: hidden;
 }
 .page2{
     display: flex;
@@ -21,7 +22,7 @@
     
 }
 .contact{
-    /* position: absolute; */
+    position: absolute;
 width: 714px;
 height: 122px;
 left: 200px;
@@ -37,7 +38,7 @@ color: #262525;
 }
 
 .contact_byline{
-    /* position: absolute; */
+    position: absolute;
 width: 214px;
 height: 20px;
 left: 275px;
@@ -50,7 +51,7 @@ line-height: 20px;
 color: #292828;
 }
 .getin{
-/* position: absolute; */
+position: absolute;
 width: 194px;
 height: 38px;
 left: 99px;
@@ -63,7 +64,7 @@ line-height: 38px;
 color: #242323;
 }
 .san{
-    /* position: absolute; */
+    position: absolute;
 width: 226px;
 height: 38px;
 left: 99px;
@@ -78,7 +79,7 @@ color: #271c1c;
 
 }
 .contact_body{
-    /* position: absolute; */
+    position: absolute;
 left: 0%;
 right: 1.83%;
 top: 0%;
@@ -91,14 +92,14 @@ line-height: 14px;
 color: #DDCBCB;
 }
 .co_body{
-/* position: absolute; */
+position: absolute;
 width: 560px;
 height: 15px;
 left: 860px;
 top: 180px;
 }
 .contact_input{
-/* position: absolute; */
+position: absolute;
 width: 200px;
 height: 396px;
 left: 850px;
