@@ -4,10 +4,8 @@ import React from 'react'
 import './Contact.css'
 const Contact = () => {
   return (
-    <div>
-     <React.Fragment>
-      <section>
-        <div className='page1   '>
+   
+        <div className='contact__main'>
           <div className='page '>
             <p className='contact'>Contact</p>
             <p className='contact_byline'>we would love to hear from you</p>
@@ -29,9 +27,8 @@ const Contact = () => {
           <div className='submit_body'><button  type='submit'  className='submit_button'>Submit</button></div> 
           </div>
         </div>
-      </section>
-     </React.Fragment>
-    </div>
+      
+   
   )
 }
 
