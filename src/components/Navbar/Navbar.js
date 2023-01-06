@@ -1,65 +1,154 @@
-import React,{useState} from 'react'
-import { Link } from 'react-router-dom'
-import {RiCloseLine,RiMenu3Line } from "react-icons/ri";
-import './Navbar.css'
-const Navbar = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
+import React, { useState } from "react"
+import { useLocation } from 'react-router-dom'
+import Drawer from "@mui/material/Drawer"
+import { IoMenu, IoClose } from "react-icons/io5"
+import { NavLink as PageLink } from "react-router-dom"
+import { NavHashLink as NavLink } from "react-router-hash-link"
+import { useScrollPosition } from "../../hooks/useScrollPosition"
 
+import "./Navbar.css"
+
+function Navbar() {
+  const [drawer, setDrawer] = useState(false)
+
+  const handleDrawerOpen = () => {
+    setDrawer(true)
+  }
+
+  const handleDrawerClose = () => {
+    setDrawer(false)
+  }
+
+  const location = useLocation();
+  const scrollPosition = useScrollPosition()
+
+  // console.log(location.pathname)
+
+  const notHome = location.pathname.length > 1 ? true : false
+
+  const navStyleHome = {
+    background: scrollPosition > 300 ? "#111111" : "rgba(17, 17, 17, 0.1)",
+    boxShadow:
+      scrollPosition > 200 ? "0px 2px 9px rgba(0, 0, 0, 0.11)" : "none",
+    backdropFilter: 'blur(10px)'
+  }
+  const navStyle = {
+    background: scrollPosition > 300 ? "#111111" : "#111111",
+    boxShadow:
+      scrollPosition > 200 ? "0px 2px 9px rgba(0, 0, 0, 0.11)" : "none",
+    backdropFilter: 'none'
+  }
 
   return (
+    <div className="navbar" style={notHome ? navStyle : navStyleHome}>
+      <div className="navbar__main container">
+        <div className="nav_logo">
+       
+        </div>
+        <div className="nav_contents">
+          <NavLink
+            to="/"
+            className="nav__link"
+          >
+            HOME
+          </NavLink>
+          <NavLink
+            to="/#about"
+            className="nav__link"
+          >
+            ABOUT
+          </NavLink>
+          <PageLink
+            to="/contact"
+            className="nav__link"
+          >
+            CONTACT
+          </PageLink>
+          <PageLink
+            to="/login"
+            className="nav__link"
+          >
+            LOGIN
+          </PageLink>
+          <PageLink
+            to="/signup"
+            className="nav__link"
+          >
+            <button className="nav__signup">SIGNUP</button>
+          </PageLink>
+          
+        </div>
 
-    // <div>
-      
-    //     <ul>
-    //     <li><Link to='/'>Homepage</Link></li>
-    //     <li><Link>About</Link></li>
-    //     <li><Link to='/places'>Destinations</Link></li>
-    //     <li><Link to='/guides'>Guides</Link></li>
-    //     <li><Link to='/signup'>Signup/login</Link></li>
-    //     </ul>
-    // </div>
-    <div className="home__navbar">
-    <div className="home__navbar-links">
-      
-      <div className="home__navbar-links_container">
-      <Link to='/'><p><a href="#">HOME</a></p></Link>
-      <Link to='/'> <p><a href="#">ABOUT</a></p></Link>
-      <Link to='/'> <p><a href="#">BLOG</a></p></Link>
-      <Link to='/contact'> <p><a href="#t">CONTACT</a></p></Link>
-      <Link to='/guide'><p><a href="#">GUIDE</a></p></Link>
+        <div className="nav_hamburger" onClick={handleDrawerOpen}>
+          <IoMenu className="nam_menu_icon" />
+        </div>
       </div>
-    </div>
-    <div className="home__navbar-sign">
 
-      <Link to ='/signup'><button type="button">SIGN UP</button></Link>
+      <Drawer
+        disableScrollLock={true}
+        anchor="left"
+        open={drawer}
+        onClose={handleDrawerClose}
+        sx={{
+          borderRadius: 20,
+          width: "90%",
+        }}
+      >
+        <div className="navbar__mob">
+          <div className="navbar_mob_close" onClick={handleDrawerClose}>
+            <IoClose />
+          </div>
+          <div className="navbar__mobcontents">
+            <NavLink
+              data-aos="fade-right"
+              data-aos-duration="200"
+              to="/#home"
+              onClick={handleDrawerClose}
+              className="navmob__link"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              data-aos="fade-right"
+              data-aos-duration="400"
+              to="/#about"
+              onClick={handleDrawerClose}
+              className="navmob__link"
+            >
+              About
+            </NavLink>
+            <PageLink
+              data-aos="fade-right"
+              data-aos-duration="600"
+              to="/contact"
+              onClick={handleDrawerClose}
+              className="navmob__link"
+            >
+              Contact 
+            </PageLink>
+            <PageLink
+              data-aos="fade-right"
+              data-aos-duration="800"
+              to="/login"
+              onClick={handleDrawerClose}
+              className="navmob__link"
+            >
+              Login
+            </PageLink>
+            <PageLink
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              to="/signup"
+              onClick={handleDrawerClose}
+              className="navmob__link"
+            >
+              <button className="nav__signup">SIGNUP</button>
+            </PageLink>
+            
+          </div>
+        </div>
+      </Drawer>
     </div>
-    <div className="home__navbar-menu">
-      {toggleMenu
-        ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
-        : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
-      {toggleMenu && (
-      <div className="home__navbar-menu_container scale-up-center">
-         <div className="home__navbar-links">
-      
-      <div className="home__navbar-links_container">
-      <Link to='/'><p><a href="#">HOME</a></p></Link>
-      <Link to='/places'> <p><a href="#">DESTINATION</a></p></Link>
-      <Link to='/'> <p><a href="#">BLOG</a></p></Link>
-      <Link to='/contact'> <p><a href="#">CONTACT</a></p></Link>
-      <Link to='/'><p><a href="#">LOGIN</a></p></Link>
-      </div>
-
-    </div>
-    <div className="home__navbar-sign">
-   
-      <button type="button">SIGN UP</button>
-    </div>
-      </div>
-      )}
-    </div>
-  </div>
-
-
   )
 }
 
