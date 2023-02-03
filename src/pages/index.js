@@ -1,5 +1,8 @@
-export {default as Homepage} from './Homepage/Homepage'
-export {default as Contact} from './Contact/Contact'
-export {default as Login} from './Login/Login'
-export {default as Places} from './Places/Places'
-export {default as Signup} from './Signup/Signup'
+import { lazy } from 'react';
+
+export const Homepage = lazy(() => import("./Homepage/Homepage"));
+export const Contact = lazy(() => import("./Contact/Contact"));
+export const Login = lazy(() => import("./Login/Login"));
+export const Places = lazy(() => import("./Places/Places"));
+export const Signup = lazy(() => import("./Signup/Signup"));
+export const Items = lazy(() => import("./Items/Items"));

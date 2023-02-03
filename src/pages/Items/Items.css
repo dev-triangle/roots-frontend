@@ -1,0 +1,9 @@
+.items__card_container{
+    display: flex;
+    min-width: 100vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+}

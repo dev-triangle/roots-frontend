@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './Login.css'
 import MainLayout from '../../components/MainLayout/MainLayout'
 import { baseUrl } from '../../utils/urls'
-import axios from 'axios'
 import axiosInstance from '../../auth/authHandler'
 import { useNavigate } from 'react-router-dom'
 const Login = () => {

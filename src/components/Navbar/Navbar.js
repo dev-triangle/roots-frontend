@@ -53,10 +53,10 @@ function Navbar() {
             HOME
           </NavLink>
           <NavLink
-            to="/#about"
+            to="/items"
             className="nav__link"
           >
-            ABOUT
+            ITEMS
           </NavLink>
           <PageLink
             to="/contact"
@@ -111,11 +111,11 @@ function Navbar() {
             <NavLink
               data-aos="fade-right"
               data-aos-duration="400"
-              to="/#about"
+              to="/items"
               onClick={handleDrawerClose}
               className="navmob__link"
             >
-              About
+              Items
             </NavLink>
             <PageLink
               data-aos="fade-right"
