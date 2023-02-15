@@ -1,33 +1,28 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import React, { useState } from 'react'
+import ItemsDetDialog from '../../components/ItemsDetDialog/ItemsDetDialog'
+const ItemsCard = ({itemName,itemImage}) => {
+  const[pName,setPName]=useState('');
+  const[open,setOpen]=useState(false);
 
-export default function ItemsCard() {
+  const handleClose=()=>{
+    setOpen(false);
+  }
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image="https://avatars.githubusercontent.com/u/110590339?s=200&v=4"
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-  );
+    <div className='item__card__body'>
+      <ItemsDetDialog open={open} handleClose={handleClose} pName={pName}/>
+      <img className='item__card_img' src={itemImage} alt="item__image" />
+      <p>{itemName}</p>
+      <div className="item__btns">
+        <button className="item__purchase_btn">Purchase</button>
+        <button className="item__view_btn" onClick={()=>{
+          setOpen(true);
+          setPName(itemName)
+        }}>View Details</button>
+      </div>
+
+
+    </div>
+  )
 }
+
+export default ItemsCard

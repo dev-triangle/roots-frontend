@@ -1,9 +1,58 @@
-.items__card_container{
+
+  .vieew_details_item_button{
+    backdrop-filter: blur(200px);
+    background: hsla(0,0%,100%,.1);
+    border: 0.1px solid #ffffff27;
+    border-radius: 8px;
+    color: #ffffffd7;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: auto;
+    padding: 0.55rem 1.5rem;
+  }
+
+  .items__card_container{
+    padding: 3rem;
+  }
+  .button_container_item_card{
     display: flex;
-    min-width: 100vw;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1rem;
+    width: 100%;
     justify-content: center;
-}
+  }
+  .purchase_item_button{
+    backdrop-filter: blur(200px);
+    background: hsla(0,0%,100%,.1);
+    border: 0.1px solid #ffffff27;
+    border-radius: 8px;
+    color: #ffffffd7;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: auto;
+    padding: 0.55rem 1.5rem;
+  }
+  .item__card__body{
+    height: 13rem;
+    width: 16rem;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #ffff;
+    gap: 1rem;
+  }
+  .item__card_img{
+    width: 5rem;
+    height: 5rem;
+  }
+  .item__btns{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
