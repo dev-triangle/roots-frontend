@@ -5,7 +5,6 @@ import PlaceCard from './PlaceCard'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { baseUrl } from '../../utils/urls'
-import { responsivePropType } from '@mui/system'
 const Places = () => {
   const[places,setPlaces]=useState([])
   useEffect(()=>{
@@ -22,7 +21,7 @@ const Places = () => {
         <div className="places__cards_container">
           {places.map((place,index)=>{
             return(
-            <PlaceCard key={index} placeName={place.place_name} placeImage={place.place_image} placeDesc={place.place_description}/>
+            <PlaceCard key={index} placeId={place.id} placeName={place.place_name} placeImage={place.place_image} placeDesc={place.place_description}/>
             )
           })}
           

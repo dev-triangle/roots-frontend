@@ -1,11 +1,11 @@
-import React from 'react'
-import './Loader.css'
+import React from "react";
+import "./Loader.css";
 const Loader = () => {
   return (
-    <div className='loader__holder'>
-        <span class="loader">Load&nbsp;ng</span>
+    <div className="loader__container">
+      <div className="loader"></div>
     </div>
-  )
-}
+  );
+};
 
-export default Loader
+export default Loader;

@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Places.css'
-const PlaceCard = ({placeName, placeImage,placeDesc}) => {
+import { useNavigate } from 'react-router-dom';
+import PlaceDetDialog from '../../components/PlaceDetDialog/PlaceDetDialog';
+const PlaceCard = ({placeName, placeImage,placeDesc,placeId}) => {
+    const[open,setOpen]=useState(false);
+    const navigate=useNavigate();
+    const handleClose=()=>{
+        setOpen(false)
+    }
   return (
     <div className="place__card">
+        <PlaceDetDialog open={open} handleClose={handleClose} setOpen={setOpen} placeDesc={placeDesc} placeImage={placeImage} placeName={placeName}/>
         <img className='place__card_pimg' src={placeImage} alt="place_img" />
         <p className='place__card_pname'>{placeName}</p>
         <div className="place__card__btns">
-            <button className='place__card_v_btn'>View Details</button>
-            <button className='place__card_b_btn'>Book Package</button>
+            <button onClick={()=>{
+                setOpen(true);
+            }}  className='place__card_v_btn'>View Details</button>
+            <button className='place__card_b_btn' onClick={()=>{
+                navigate(`/places/${placeId}`)
+            }}>Book Package</button>
         </div>
     </div>
   )

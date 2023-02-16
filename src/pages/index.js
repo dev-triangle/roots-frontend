@@ -6,3 +6,4 @@ export const Login = lazy(() => import("./Login/Login"));
 export const Places = lazy(() => import("./Places/Places"));
 export const Signup = lazy(() => import("./Signup/Signup"));
 export const Items = lazy(() => import("./Items/Items"));
+export const PlaceDetailPg=lazy(() =>import("./PlaceDetailPg/PlaceDetailPg"))
