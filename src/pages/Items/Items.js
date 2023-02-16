@@ -20,7 +20,7 @@ const Items = () => {
         <div className="items__card_container">
            {itemElements.map((itemElement,index)=>{
             return(
-              <ItemsCard itemImage={itemElement.item_image} itemName={itemElement.item_name} key={index}/>
+              <ItemsCard itemImage={itemElement.item_image} itemDesc={itemElement.item_desc} itemName={itemElement.item_name} key={index}/>
             )
               
            })}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Dialog } from '@mui/material'
-const ItemsDetDialog = ({open,handleClose,pName}) => {
+const ItemsDetDialog = ({open,handleClose,pName,itemDesc}) => {
   return (
     <div>
         <Dialog
@@ -15,6 +15,7 @@ const ItemsDetDialog = ({open,handleClose,pName}) => {
         aria-describedby="alert-dialog-description"
       >
         <h1>{pName}</h1>
+        <p>{itemDesc}</p>
 
         </Dialog>
     </div>

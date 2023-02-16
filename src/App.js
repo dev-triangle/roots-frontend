@@ -5,11 +5,11 @@ import { Homepage, Contact,Signup,Login,Places,Items} from './pages'
 import Guides from './pages/Guides/Guides';
 import Navbar from  './components/Navbar/Navbar'
 import ScrollToTop from './utils/ScrollToTop';
-
+import Loader from './components/Loader/Loader';
 function App() {
   return (
     <div className="App">
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<Loader/>}>
       <BrowserRouter>
       <ScrollToTop/>
       <Routes>

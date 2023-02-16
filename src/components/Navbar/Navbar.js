@@ -58,6 +58,12 @@ function Navbar() {
           >
             ITEMS
           </NavLink>
+          <NavLink
+            to="/places"
+            className="nav__link"
+          >
+            PLACES
+          </NavLink>
           <PageLink
             to="/contact"
             className="nav__link"
@@ -107,6 +113,15 @@ function Navbar() {
               className="navmob__link"
             >
               Home
+            </NavLink>
+            <NavLink
+              data-aos="fade-right"
+              data-aos-duration="400"
+              to="/places"
+              onClick={handleDrawerClose}
+              className="navmob__link"
+            >
+              Destinations
             </NavLink>
             <NavLink
               data-aos="fade-right"
