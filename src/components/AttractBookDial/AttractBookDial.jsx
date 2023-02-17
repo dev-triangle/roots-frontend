@@ -17,8 +17,10 @@ const AttractBookDial = ({open,handleClose,finalSubmit}) => {
         <div className="dialog__book_confirm">
             <p>Are u sure u wanna book????</p>
             <div className="dialog__book_confirm btns">
-                <button onClick={finalSubmit}>Yes</button>
-                <button onClick={handleClose}>No</button>
+                <button onClick={()=>{finalSubmit()
+                handleClose();
+                }}>Yes</button>
+                <button onClick={()=>{handleClose()}}>No</button>
             </div>
         </div>
     </Dialog>

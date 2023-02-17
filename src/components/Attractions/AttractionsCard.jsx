@@ -32,11 +32,14 @@ const AttractionsCard = ({
       attact_foreign: attractId,
       user_foreign: userId,
     }).then((res)=>{
-      console.log(res);
+      // console.log(res)
+      if(res.status===201){
+        alert('Successfully Booked');
+
+      }
     },(error)=>{
       console.log(error)
     })
-    console.log("Hello myree")
   };
   return (
     <div className="attraction__card_body">
