@@ -6,7 +6,6 @@ import { NavLink as PageLink } from "react-router-dom";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 import "./Navbar.css";
-import Stars from "../Stars/Stars";
 function Navbar() {
   const [drawer, setDrawer] = useState(false);
 
