@@ -5,7 +5,6 @@ import { IoMenu, IoClose } from "react-icons/io5";
 import { NavLink as PageLink } from "react-router-dom";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
-
 import "./Navbar.css";
 
 function Navbar() {
@@ -56,6 +55,11 @@ function Navbar() {
           <PageLink to="/contact" className="nav__link">
             CONTACT
           </PageLink>
+          {window.localStorage.getItem("access_token") ? (
+            <PageLink to="/profile" className="nav__link">
+              MY PROFILE
+            </PageLink>
+          ) : null}
 
           {window.localStorage.getItem("access_token") ? (
             <PageLink
@@ -81,7 +85,7 @@ function Navbar() {
           )}
         </div>
 
-        <div className="nav_hamburger" onClick={handleDrawerOpen}>
+        <div className="nav_hamburger" onClick={()=>{handleDrawerOpen();}}>
           <IoMenu className="nam_menu_icon" />
         </div>
       </div>
@@ -90,14 +94,14 @@ function Navbar() {
         disableScrollLock={true}
         anchor="left"
         open={drawer}
-        onClose={handleDrawerClose}
+        onClose={()=>{handleDrawerClose();}}
         sx={{
           borderRadius: 20,
           width: "90%",
         }}
       >
         <div className="navbar__mob">
-          <div className="navbar_mob_close" onClick={handleDrawerClose}>
+          <div className="navbar_mob_close" onClick={()=>{handleDrawerClose();}}>
             <IoClose />
           </div>
           <div className="navbar__mobcontents">
@@ -105,7 +109,7 @@ function Navbar() {
               data-aos="fade-right"
               data-aos-duration="200"
               to="/#home"
-              onClick={handleDrawerClose}
+              onClick={()=>{handleDrawerClose();}}
               className="navmob__link"
             >
               Home
@@ -114,7 +118,7 @@ function Navbar() {
               data-aos="fade-right"
               data-aos-duration="400"
               to="/places"
-              onClick={handleDrawerClose}
+              onClick={()=>{handleDrawerClose();}}
               className="navmob__link"
             >
               Destinations
@@ -123,7 +127,7 @@ function Navbar() {
               data-aos="fade-right"
               data-aos-duration="400"
               to="/items"
-              onClick={handleDrawerClose}
+              onClick={()=>{handleDrawerClose()}}
               className="navmob__link"
             >
               Items
@@ -132,29 +136,59 @@ function Navbar() {
               data-aos="fade-right"
               data-aos-duration="600"
               to="/contact"
-              onClick={handleDrawerClose}
+              onClick={()=>{handleDrawerClose();}}
               className="navmob__link"
             >
               Contact
             </PageLink>
-            <PageLink
-              data-aos="fade-right"
-              data-aos-duration="800"
-              to="/login"
-              onClick={handleDrawerClose}
-              className="navmob__link"
-            >
-              Login
-            </PageLink>
-            <PageLink
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              to="/signup"
-              onClick={handleDrawerClose}
-              className="navmob__link"
-            >
-              <button className="nav__signup">SIGNUP</button>
-            </PageLink>
+
+            {window.localStorage.getItem("access_token") ? (
+              <PageLink
+                data-aos="fade-right"
+                data-aos-duration="800"
+                onClick={() => {
+                  window.localStorage.removeItem("access_token");
+                  window.localStorage.removeItem("refresh_token");
+                  handleDrawerClose();
+                }}
+                className="navmob__link"
+              >
+                Logout
+              </PageLink>
+            ) : (
+              <PageLink
+                data-aos="fade-right"
+                data-aos-duration="800"
+                to="/login"
+                onClick={()=>{handleDrawerClose();}}
+                className="navmob__link"
+              >
+                Login
+              </PageLink>
+            )}
+            {window.localStorage.getItem("access_token") ? (
+              <PageLink
+                data-aos="fade-right"
+                data-aos-duration="800"
+                to="/profile"
+                onClick={() => {
+                  handleDrawerClose();
+                }}
+                className="navmob__link"
+              >
+                My Profile
+              </PageLink>
+            ) : (
+              <PageLink
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                to="/signup"
+                onClick={()=>{handleDrawerClose();}}
+                className="navmob__link"
+              >
+                <button className="nav__signup">SIGNUP</button>
+              </PageLink>
+            )}
           </div>
         </div>
       </Drawer>
