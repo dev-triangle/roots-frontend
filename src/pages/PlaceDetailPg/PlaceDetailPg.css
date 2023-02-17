@@ -12,7 +12,7 @@
     font-size: 3rem;
 
 }
-.place__detail_page_container img{
+.place__image{
     width: 10rem;
     height: 7rem;
 }
@@ -21,8 +21,23 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
     padding: 3rem;
+}
+.festivals__section{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.festivals__container{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 3rem;
 }
 .place__detail_content p{
     display: flex;
@@ -42,6 +57,7 @@
     margin: 30px auto;
     width: 300px;
     height: 300px;
+    font-family: var(--primary-font);
     border-radius: 40px;
   box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
     cursor: pointer;
@@ -83,6 +99,29 @@
   
   .title-black {
     color: black;
+  }
+  
+
+  .festival__card_body{
+    display: flex;
+    width: 13rem;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 20px;
+    align-items: center;
+    color: #ffff;
+    height: 15rem;
+    background-color: #002B5B;
+  }
+
+  .festival__card_body img{
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .festival__card_body p{
+    font-family: var(--primary-font);
   }
   
   @media all and (max-width: 500px) {

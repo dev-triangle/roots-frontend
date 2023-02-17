@@ -1,88 +1,84 @@
-import React, { useState } from "react"
-import { useLocation } from 'react-router-dom'
-import Drawer from "@mui/material/Drawer"
-import { IoMenu, IoClose } from "react-icons/io5"
-import { NavLink as PageLink } from "react-router-dom"
-import { NavHashLink as NavLink } from "react-router-hash-link"
-import { useScrollPosition } from "../../hooks/useScrollPosition"
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
+import Drawer from "@mui/material/Drawer";
+import { IoMenu, IoClose } from "react-icons/io5";
+import { NavLink as PageLink } from "react-router-dom";
+import { NavHashLink as NavLink } from "react-router-hash-link";
+import { useScrollPosition } from "../../hooks/useScrollPosition";
 
-import "./Navbar.css"
+import "./Navbar.css";
 
 function Navbar() {
-  const [drawer, setDrawer] = useState(false)
+  const [drawer, setDrawer] = useState(false);
 
   const handleDrawerOpen = () => {
-    setDrawer(true)
-  }
+    setDrawer(true);
+  };
 
   const handleDrawerClose = () => {
-    setDrawer(false)
-  }
+    setDrawer(false);
+  };
 
   const location = useLocation();
-  const scrollPosition = useScrollPosition()
+  const scrollPosition = useScrollPosition();
 
   // console.log(location.pathname)
 
-  const notHome = location.pathname.length > 1 ? true : false
+  const notHome = location.pathname.length > 1 ? true : false;
 
   const navStyleHome = {
     background: scrollPosition > 300 ? "#111111" : "rgba(17, 17, 17, 0.1)",
     boxShadow:
       scrollPosition > 200 ? "0px 2px 9px rgba(0, 0, 0, 0.11)" : "none",
-    backdropFilter: 'blur(10px)'
-  }
+    backdropFilter: "blur(10px)",
+  };
   const navStyle = {
     background: scrollPosition > 300 ? "#111111" : "#111111",
     boxShadow:
       scrollPosition > 200 ? "0px 2px 9px rgba(0, 0, 0, 0.11)" : "none",
-    backdropFilter: 'none'
-  }
+    backdropFilter: "none",
+  };
 
   return (
     <div className="navbar" style={notHome ? navStyle : navStyleHome}>
       <div className="navbar__main container">
-        <div className="nav_logo">
-       
-        </div>
+        <div className="nav_logo"></div>
         <div className="nav_contents">
-          <NavLink
-            to="/"
-            className="nav__link"
-          >
+          <NavLink to="/" className="nav__link">
             HOME
           </NavLink>
-          <NavLink
-            to="/items"
-            className="nav__link"
-          >
+          <NavLink to="/items" className="nav__link">
             ITEMS
           </NavLink>
-          <NavLink
-            to="/places"
-            className="nav__link"
-          >
+          <NavLink to="/places" className="nav__link">
             PLACES
           </NavLink>
-          <PageLink
-            to="/contact"
-            className="nav__link"
-          >
+          <PageLink to="/contact" className="nav__link">
             CONTACT
           </PageLink>
-          <PageLink
-            to="/login"
-            className="nav__link"
-          >
-            LOGIN
-          </PageLink>
-          <PageLink
-            to="/signup"
-            className="nav__link"
-          >
-            <button className="nav__signup">SIGNUP</button>
-          </PageLink>
-          
+
+          {window.localStorage.getItem("access_token") ? (
+            <PageLink
+              onClick={() => {
+                window.localStorage.removeItem("access_token");
+                window.localStorage.removeItem("refresh_token");
+                window.location.reload();
+              }}
+              className="nav__link"
+            >
+              LOGOUT
+            </PageLink>
+          ) : (
+            <PageLink to="/login" className="nav__link">
+              LOGIN
+            </PageLink>
+          )}
+
+          {window.localStorage.getItem("access_token") ? null : (
+            <PageLink to="/signup" className="nav__link">
+              <button className="nav__signup">SIGNUP</button>
+            </PageLink>
+          )}
         </div>
 
         <div className="nav_hamburger" onClick={handleDrawerOpen}>
@@ -139,7 +135,7 @@ function Navbar() {
               onClick={handleDrawerClose}
               className="navmob__link"
             >
-              Contact 
+              Contact
             </PageLink>
             <PageLink
               data-aos="fade-right"
@@ -159,12 +155,11 @@ function Navbar() {
             >
               <button className="nav__signup">SIGNUP</button>
             </PageLink>
-            
           </div>
         </div>
       </Drawer>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
