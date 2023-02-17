@@ -9,7 +9,6 @@ const Attractions = () => {
   const [attracts, setAttracts] = useState([]);
   useEffect(() => {
     axios.get(`${baseUrl}/attractions/`).then((response) => {
-        console.log(response)
       setAttracts(response.data);
     });
   });
@@ -21,6 +20,9 @@ const Attractions = () => {
           attract.place_foreign === parseInt(place_id) ? (
             <AttractionsCard
               key={index}
+              placeId={place_id}
+              attractId={attract.id}
+              attractPhno={attract.contact_number}
               attractImage={attract.image}
               attractName={attract.name}
               attractDesc={attract.desc}

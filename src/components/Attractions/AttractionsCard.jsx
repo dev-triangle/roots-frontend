@@ -1,17 +1,54 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Attractions.css";
-const AttractionsCard = ({attractImage,attractName,attractDesc}) => {
+import axiosInstance from "../../auth/authHandler";
+import { baseUrl } from "../../utils/urls";
+import AttractBookDial from "../AttractBookDial/AttractBookDial";
+const AttractionsCard = ({
+  attractImage,
+  attractName,
+  attractDesc,
+  attractId,
+  attractPhno,
+  placeId,
+}) => {
+  const[open,setOpen]=useState(false)
+  const [userId, setUserId] = useState();
+  const handleClose=()=>{
+    setOpen(false);
+  }
+  useEffect(() => {
+    axiosInstance.get(`${baseUrl}/current-user/`).then(
+      (response) => {
+        setUserId(response.data.id);
+      },
+      (error) => {}
+    );
+  }, []);
+  const finalSubmit = () => {
+    axiosInstance.post(`${baseUrl}/booking/`, {
+      date: "2023-02-11",
+      image: attractImage,
+      place_foreign: placeId,
+      attact_foreign: attractId,
+      user_foreign: userId,
+    }).then((res)=>{
+      console.log(res);
+    },(error)=>{
+      console.log(error)
+    })
+    console.log("Hello myree")
+  };
   return (
-    <div>
-      <div className="attractions__flip-card" tabIndex="0">
-        <div className="attractions__flip-card-inner">
-          <div className="attractions__flip-card-front" style={{backgroundImage: `url(${attractImage})` }}>
-            <h3>{attractName}</h3>
-          </div>
-          <div className="attractions__flip-card-back">
-            <h3>{attractDesc}</h3>
-          </div>
-        </div>
+    <div className="attraction__card_body">
+      <AttractBookDial open={open} handleClose={handleClose} finalSubmit={finalSubmit}/>
+      <img src={attractImage} alt=" " />
+      <p>{attractName}</p>
+      <p>Ph: {attractPhno}</p>
+      <div className="attract__card_btns">
+        <button onClick={()=>{
+          setOpen(true)
+        }}>Book Now</button>
+        <button >View Details</button>
       </div>
     </div>
   );
