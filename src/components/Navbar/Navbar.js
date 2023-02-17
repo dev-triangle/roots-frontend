@@ -6,7 +6,7 @@ import { NavLink as PageLink } from "react-router-dom";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 import "./Navbar.css";
-
+import Stars from "../Stars/Stars";
 function Navbar() {
   const [drawer, setDrawer] = useState(false);
 
@@ -85,7 +85,12 @@ function Navbar() {
           )}
         </div>
 
-        <div className="nav_hamburger" onClick={()=>{handleDrawerOpen();}}>
+        <div
+          className="nav_hamburger"
+          onClick={() => {
+            handleDrawerOpen();
+          }}
+        >
           <IoMenu className="nam_menu_icon" />
         </div>
       </div>
@@ -94,14 +99,21 @@ function Navbar() {
         disableScrollLock={true}
         anchor="left"
         open={drawer}
-        onClose={()=>{handleDrawerClose();}}
+        onClose={() => {
+          handleDrawerClose();
+        }}
         sx={{
           borderRadius: 20,
           width: "90%",
         }}
       >
         <div className="navbar__mob">
-          <div className="navbar_mob_close" onClick={()=>{handleDrawerClose();}}>
+          <div
+            className="navbar_mob_close"
+            onClick={() => {
+              handleDrawerClose();
+            }}
+          >
             <IoClose />
           </div>
           <div className="navbar__mobcontents">
@@ -109,7 +121,9 @@ function Navbar() {
               data-aos="fade-right"
               data-aos-duration="200"
               to="/#home"
-              onClick={()=>{handleDrawerClose();}}
+              onClick={() => {
+                handleDrawerClose();
+              }}
               className="navmob__link"
             >
               Home
@@ -118,7 +132,9 @@ function Navbar() {
               data-aos="fade-right"
               data-aos-duration="400"
               to="/places"
-              onClick={()=>{handleDrawerClose();}}
+              onClick={() => {
+                handleDrawerClose();
+              }}
               className="navmob__link"
             >
               Destinations
@@ -127,7 +143,9 @@ function Navbar() {
               data-aos="fade-right"
               data-aos-duration="400"
               to="/items"
-              onClick={()=>{handleDrawerClose()}}
+              onClick={() => {
+                handleDrawerClose();
+              }}
               className="navmob__link"
             >
               Items
@@ -136,7 +154,9 @@ function Navbar() {
               data-aos="fade-right"
               data-aos-duration="600"
               to="/contact"
-              onClick={()=>{handleDrawerClose();}}
+              onClick={() => {
+                handleDrawerClose();
+              }}
               className="navmob__link"
             >
               Contact
@@ -160,7 +180,9 @@ function Navbar() {
                 data-aos="fade-right"
                 data-aos-duration="800"
                 to="/login"
-                onClick={()=>{handleDrawerClose();}}
+                onClick={() => {
+                  handleDrawerClose();
+                }}
                 className="navmob__link"
               >
                 Login
@@ -183,7 +205,9 @@ function Navbar() {
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 to="/signup"
-                onClick={()=>{handleDrawerClose();}}
+                onClick={() => {
+                  handleDrawerClose();
+                }}
                 className="navmob__link"
               >
                 <button className="nav__signup">SIGNUP</button>
