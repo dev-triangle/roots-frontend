@@ -1,42 +1,49 @@
-.places__main_container{
+.places__main_container {
     width: 100vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-
 }
 
-.places__cards_container{
+.places__cards_container {
     display: flex;
     width: 100%;
     padding: 3rem;
     align-items: center;
     justify-content: center;
 }
-.place__card{
-    width: 250px;
-    height: 320px;
+
+.place__card {
+    width: 27rem;
+    height: 25rem;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 1rem;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 1rem;
     gap: 1rem;
     background: rgba(254, 245, 245, 0.09);
     backdrop-filter: blur(39px);
+    box-shadow: 0.1rem 0.1rem 1rem white;
 }
-.place__card_pimg{
-    height: 10rem;
-    width: 13rem;
-    border-radius: 15px;
+
+.place__card_pimg {
+    height: 11rem;
+    width: 22rem;
+    border-radius: 1rem;
 }
-.place__card_pname{
-    font-size: 1rem;
+
+.place__card_pname {
+    color: white;
     text-transform: capitalize;
+    font-size: 2rem;
+    font-family: system-ui;
 }
-.place__card_v_btn{
+
+.place__card_v_btn {
     background-color: rgba(254, 245, 245, 0.09);
     border: 1px solid #ffff;
     color: #ffff;
@@ -49,9 +56,9 @@
     align-items: center;
     padding: 0.5rem;
     border-radius: 10px;
-
 }
-.place__card_b_btn{
+
+.place__card_b_btn {
     color: #ffff;
     background: #006360;
     display: flex;
@@ -65,9 +72,34 @@
     border: #006360;
 }
 
-.place__card__btns{
-    display: flex;
+.place__card__btns {
     width: 100%;
-    flex-direction: row;
-    gap: 1rem;
+    display: flex;
+    margin: 1rem;
+    justify-content: space-evenly;
+}
+
+.place__card__cbt {
+    padding: 1.2rem;
+    width: 50%;
+    margin: 1rem;
+    border: none;
+    outline: none;
+    box-shadow: rgb(17 17 26 / 10%) 0px 4px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
+    background: #67686d;
+    font-size: large;
+    border: 2px solid #ada9f1;
+    transition: height 1s ease-in-out 0ms;
+}
+
+.place__card__cbt:hover {
+    background-color: rgb(61, 32, 61);
+    height: 4rem;
+}
+
+.places__main__heading {
+    color: rgb(255, 254, 253);
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0.1rem 0.2rem 1rem white;
 }
