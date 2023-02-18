@@ -17,7 +17,7 @@ const Places = () => {
     return (
     <MainLayout>
       <div className="places__main_container">
-        <h1>Places</h1>
+        <h1 className="places__main__heading">Places</h1>
         <div className="places__cards_container">
           {places.map((place,index)=>{
             return(
