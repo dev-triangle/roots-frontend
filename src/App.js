@@ -5,11 +5,26 @@ import { Homepage, Contact,Signup,Login,Places,Items,PlaceDetailPg,ProfilePg} fr
 import Navbar from  './components/Navbar/Navbar'
 import ScrollToTop from './utils/ScrollToTop';
 import Loader from './components/Loader/Loader';
+import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <div className="App">
       <Suspense fallback={<Loader/>}>
       <BrowserRouter>
+      <Toaster
+              toastOptions={{
+                className: "",
+                style: {
+                  background:'#263743',
+                  color: "#ffff",
+                  padding: "10px",
+                  borderRadius: "8px",
+                  fontFamily:'Rhizome',
+                  fontSize:'1rem'
+                },
+              }}
+              position="top-right"
+            />
       <ScrollToTop/>
       <Routes>
         <Route path='/' element={<Homepage/>}/>
