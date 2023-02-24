@@ -16,8 +16,9 @@
 }
 
 .place__card {
-    width: 27rem;
+    width: 30%;
     height: 25rem;
+    margin: 1rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -32,7 +33,7 @@
 
 .place__card_pimg {
     height: 11rem;
-    width: 22rem;
+    width: 80%;
     border-radius: 1rem;
 }
 
@@ -102,4 +103,72 @@
     font-size: 3rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 0.1rem 0.2rem 1rem white;
+}
+
+@media (min-device-width: 800px) and (max-device-width: 1200px) {
+    .place__card {
+        height: 19rem;
+    }
+    .place__card__cbt {
+        font-size: .8rem;
+    }
+    .place__card_pimg {
+        height: 6rem;
+    }
+}
+
+@media (min-device-width: 650px) and (max-device-width: 800px) {
+    .place__card {
+        width: 40%;
+        height: 18rem;
+        padding: 2rem;
+    }
+    .places__cards_container {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+    .place__card__cbt {
+        font-size: .8rem;
+    }
+    .place__card_pname {
+        font-size: 1rem;
+    }
+    .place__card_pimg {
+        height: 6rem;
+    }
+}
+
+@media (min-device-width: 250px) and (max-device-width: 650px) {
+    .place__card {
+        width: 80%;
+        height: 18rem;
+        padding: 2rem;
+    }
+}
+
+@media (min-device-width: 250px) and (max-device-width: 650px) {
+    .place__card {
+        width: 80%;
+        height: 18rem;
+        padding: 2rem;
+    }
+    .places__cards_container {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+    .place__card__cbt {
+        font-size: .8rem;
+    }
+    .place__card_pname {
+        font-size: 1rem;
+    }
+    .place__card_pimg {
+        height: 6rem;
+    }
+}
+
+@media screen and (max-device-width: 250px) {
+    body {
+        display: none;
+    }
 }
