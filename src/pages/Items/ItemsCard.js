@@ -1,10 +1,29 @@
 import React, { useState } from 'react'
 import ItemsDetDialog from '../../components/ItemsDetDialog/ItemsDetDialog'
-const ItemsCard = ({itemName,itemImage,itemDesc}) => {
+import { baseUrl } from '../../utils/urls';
+import axiosInstance from '../../auth/authHandler';
+import { toast } from 'react-hot-toast';
+const ItemsCard = ({itemName,itemImage,itemDesc,itemId,userId}) => {
   const[pName,setPName]=useState('');
   const[open,setOpen]=useState(false);
   const handleClose=()=>{
     setOpen(false);
+  }
+ 
+  let date=new Date();
+  const isoDateString = date.toISOString().substring(0, 10);
+  const purchaseItem=(e)=>{
+      axiosInstance.post(`${baseUrl}/purchases/`,{
+        date_of_purchase: isoDateString,
+        item_foreign_key: itemId,
+        user_foreign: userId
+    }).then((response)=>{
+      console.log("purchase: ",response)
+      if(response.status===201){
+        toast.success("Succesfully placed the order!!");
+      }
+    })
+    
   }
   return (
     <div className='item__card__body'>
@@ -12,7 +31,9 @@ const ItemsCard = ({itemName,itemImage,itemDesc}) => {
       <img className='item__card_img' src={itemImage} alt="item__image" />
       <p>{itemName}</p>
       <div className="item__btns">
-        <button className="item__purchase_btn">Purchase</button>
+        <button className="item__purchase_btn" onClick={()=>{
+          purchaseItem();
+        }}>Purchase</button>
         <button className="item__view_btn" onClick={()=>{
           setOpen(true);
           setPName(itemName)
