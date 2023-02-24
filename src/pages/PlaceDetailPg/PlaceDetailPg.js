@@ -6,7 +6,7 @@ import { baseUrl } from "../../utils/urls";
 import "./PlaceDetailPg.css";
 import ActivityCard from "./ActivityCard";
 import FestivalCard from "./FestivalCard";
-
+import GuidesSection from "./GuidesSection";
 import Attractions from "../../components/Attractions/Attractions";
 
 const PlaceDetailPg = () => {
@@ -54,7 +54,7 @@ const PlaceDetailPg = () => {
         </div>
 
         <div className="place__activites">
-          <h1>Activities</h1>
+          <h1>Destinations</h1>
 
           {activities.map((activity, index) =>
             activity.place_foreign === parseInt(place_id) ? (
@@ -83,6 +83,8 @@ const PlaceDetailPg = () => {
         </div>
 
         <Attractions/>
+        <GuidesSection placeName={place.place_name}/>
+
       </div>
     </MainLayout>
   );

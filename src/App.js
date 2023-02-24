@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import './App.css';
-import { Homepage, Contact,Signup,Login,Places,Items,PlaceDetailPg,ProfilePg} from './pages/index'
+import { Homepage, Contact,Signup,Login,Places,Items,PlaceDetailPg,ProfilePg,BecomGuidePg} from './pages/index'
 import Navbar from  './components/Navbar/Navbar'
 import ScrollToTop from './utils/ScrollToTop';
 import Loader from './components/Loader/Loader';
@@ -36,6 +36,8 @@ function App() {
         <Route path='/navbar' element={<Navbar/>}/>
         <Route path='/items' element={<Items/>}/>
         <Route path='/profile' element={<ProfilePg/>}/>
+        <Route path='/guide-reg' element={<BecomGuidePg/>}/>
+        
       </Routes>
       </BrowserRouter>
       </Suspense>
