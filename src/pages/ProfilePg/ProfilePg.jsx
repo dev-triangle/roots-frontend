@@ -32,7 +32,6 @@ const ProfilePg = () => {
           </div>
           </div>
         </div>
-        
     </MainLayout>
   )
 }
