@@ -5,6 +5,7 @@ import BecomeGuideForm from "./BecomeGuideForm";
 import { MenuItem,Select, InputLabel,FormControl} from "@mui/material";
 import axios from "axios";
 import { baseUrl } from "../../utils/urls";
+import './BecomGuidePg.css'
 const BecomGuidePg = () => {
   const [placeId,setPlaceId]=useState()
   const[places,setPlaces]=useState([]);
@@ -21,7 +22,7 @@ const BecomGuidePg = () => {
       <div className="guide__page__main_container">
         <img src="" alt="" className="guide__vector" />
         <div className="form__part__guide">
-          <FormControl fullWidth>
+          <FormControl className="guide__place">
             <InputLabel id="demo-simple-select-label">Place</InputLabel>
             <Select
               labelId="demo-simple-select-label"
@@ -29,6 +30,7 @@ const BecomGuidePg = () => {
               value={placeId}
               label="placeId"
               onChange={handleChange}
+              className='bguide__input'
             >
               {places.map((place,index)=>{
                 return(
