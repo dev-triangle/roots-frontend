@@ -147,6 +147,7 @@ export class BecomeGuideForm extends Component {
           onClick={this.handleSubmit}
           variant="success"
           type="submit"
+          className="bgudide__button"
           block
         >
           Submit
