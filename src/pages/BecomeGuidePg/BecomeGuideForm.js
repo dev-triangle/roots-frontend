@@ -58,8 +58,8 @@ export class BecomeGuideForm extends Component {
   };
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
-        <Form.Group>
+      <Form onSubmit={this.handleSubmit} className="guide_from">
+        <Form.Group className="bguide__div">
           <Form.Control
             type="text"
             placeholder="Name *"
@@ -67,10 +67,11 @@ export class BecomeGuideForm extends Component {
             id="name"
             value={this.state.name}
             onChange={this.handleChange}
+            className='guide__input'
           />
         </Form.Group>
         <br />
-        <Form.Group>
+        <Form.Group className="bguide__div">
           <Form.Control
             type="file"
             placeholder="pic"
@@ -78,10 +79,11 @@ export class BecomeGuideForm extends Component {
             id="guideImg"
             accept=".jpg, .jpeg, .png"
             onChange={this.handleImageChange}
+            className='guide__input'
           />
         </Form.Group>
         <br />
-        <Form.Group>
+        <Form.Group className="bguide__div">
           <Form.Control
             type="text"
             placeholder="Description *"
@@ -89,10 +91,11 @@ export class BecomeGuideForm extends Component {
             id="desc"
             value={this.state.desc}
             onChange={this.handleChange}
+            className='guide__input'
           />
         </Form.Group>
         <br />
-        <Form.Group>
+        <Form.Group className="bguide__div">
           <Form.Control
             type="number"
             placeholder="Age *"
@@ -100,10 +103,11 @@ export class BecomeGuideForm extends Component {
             id="age"
             value={this.state.age}
             onChange={this.handleChange}
+            className='guide__input'
           />
         </Form.Group>
         <br />
-        <Form.Group>
+        <Form.Group className="bguide__div">
           <Form.Control
             type="text"
             placeholder="Gender *"
@@ -111,10 +115,11 @@ export class BecomeGuideForm extends Component {
             id="gender"
             value={this.state.gender}
             onChange={this.handleChange}
+            className='guide__input'
           />
         </Form.Group>
         <br />
-        <Form.Group>
+        <Form.Group className="bguide__div">
           <Form.Control
             type="text"
             placeholder="Contact *"
@@ -122,10 +127,11 @@ export class BecomeGuideForm extends Component {
             id="contact"
             value={this.state.contact}
             onChange={this.handleChange}
+            className='guide__input'
           />
         </Form.Group>
         <br />
-        <Form.Group>
+        <Form.Group className="bguide__div">
           <Form.Control
             type="text"
             placeholder="Address *"
@@ -133,6 +139,7 @@ export class BecomeGuideForm extends Component {
             id="address"
             value={this.state.address}
             onChange={this.handleChange}
+            className='guide__input'
           />
         </Form.Group>
         <br />
