@@ -48,7 +48,9 @@ const BecomGuidePg = () => {
       
       <div className='guide_img'></div>
 
-      <div className='g_container'>
+      <div className='g_rightside'>
+        <div className='g_container'>
+
             <p className='g_heading'>Book With Us Today</p>
 
             <div className='g_dot1'></div> <p className='gl_dot1'>One way</p>
@@ -68,7 +70,8 @@ const BecomGuidePg = () => {
             <input className='gu_input6' type="text"   placeholder='Class' required/>
           
             <div className='g_button' type='submit'>Search Available Flights</div> 
-      </div>
+        </div>
+      </div>  
    </div>
     </MainLayout>
   );
