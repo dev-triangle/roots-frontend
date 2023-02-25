@@ -32,7 +32,9 @@ const BecomGuidePg = () => {
             >
               {places.map((place,index)=>{
                 return(
-                  <MenuItem key={index} value={place.id}>{place.place_name}</MenuItem>
+                  <MenuItem key={index} value={place.id} onChange={(e)=>{
+                    setPlaceId(e.target.value)
+                  }}>{place.place_name}</MenuItem>
                 )
               })}
               
