@@ -19,7 +19,7 @@
     background-color: #1C3747;
 }
 .su__and_continue{
-    color: blue;
+    color:  #006360;
     font-size: 1.5rem;
 }
 .su__welcome_text{
@@ -40,7 +40,7 @@
 .su__submit_button{
     width: 15rem;
     height: 3rem;
-    background: #006DD1;
+    background:  #006360;
     box-shadow: 4px 4px 12px #000000, inset 4px 4px 14px rgba(255, 255, 255, 0.25);
     border-radius: 20px;
     color: aliceblue;

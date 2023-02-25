@@ -123,8 +123,8 @@ letter-spacing: 0.01em;
 color: #FFFFFF;
 border: none;
 }  
-.g_dot1{
-    /* position: absolute; */
+/* .g_dot1{
+  
 width: 21px;
 height: 21px;
 left: 52px;
@@ -133,7 +133,7 @@ border-radius: 1em;
 border: 1px solid #FFFFFF;
 }
 .gl_dot1{
-    /* position: absolute; */
+    
     width: 89px;
     height: 30px;
     left: 80px;
@@ -147,7 +147,7 @@ border: 1px solid #FFFFFF;
     color: #FFFFFF;
 }
 .g_dot2{
-    /* position: absolute; */
+   
 width: 21px;
 height: 21px;
 left: 202px;
@@ -156,7 +156,7 @@ border-radius: 1em;
 border: 1px solid #FFFFFF;
 }
 .gl_dot2{
-    /* position: absolute; */
+   
     width: 89px;
     height: 30px;
     left: 230px;
@@ -168,7 +168,7 @@ border: 1px solid #FFFFFF;
     line-height: 30px;
     letter-spacing: 0.01em;
     color: #FFFFFF;
-}
+} */
 
 
 @media only screen and (max-width: 1300px) {
