@@ -1,168 +1,145 @@
-.page{
-  
-    width: 50%;
-    height: 50%;
-    background:linear-gradient(104.98deg, #3B5B6F,#2F4958);
-    min-height: 100vh;
-}
-.page2{
+.su__main{
+    width: 100vw;
+    min-height: 90vh;
     display: flex;
-    width: 50%;
-    height: 50%;
-    background: linear-gradient(104.98deg,#1C3848,#102530); 
-    min-height: 100vh;
+    flex-direction: row;
+    font-family: Poppins;
 }
-.page1{
-    scrollbar-width: none;
-    color: aliceblue;
-    text-size-adjust: 4xl;
-    display: flex;
+.su__blank_space{
+    width: 50vw;
+    height: 90vh;
     justify-content: center;
     align-items: center;
-    
+    background: #3B5B6F;
+    /* background: rgba(217, 217, 217, 0.5);
+    opacity: 0.2; */
 }
-.contact{
-    position: relat;
-width: 714px;
-height: 122px;
-left: 200px;
-top: 39px;
+.su__form_container{
+    width: 50vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: #1C3747;
+}
 
+.Contact{
 font-family: 'Playfair Display';
-font-style: normal;
 font-weight: 700;
-font-size: 100px;
-line-height: 133px;
-
+font-size: 5rem;
 color: #262525;
 }
-
 .contact_byline{
-    position: relative;
-width: 214px;
-height: 20px;
-left: 275px;
-top: 161px;
 font-family: 'Playfair Display';
-font-style: normal;
 font-weight: 800;
 font-size: 15px;
-line-height: 20px;
 color: #292828;
 }
 .getin{
-position:relative;
-width: 194px;
-height: 38px;
-left: 99px;
-top: 325px;
 font-family: 'Work Sans';
-font-style: normal;
 font-weight: 700;
 font-size: 32px;
-line-height: 38px;
 color: #242323;
 }
 .san{
-    position:relative;
-width: 226px;
-height: 38px;
-left: 99px;
-top: 355px;
-
 font-family: 'Work Sans';
-font-style: normal;
 font-weight: 400;
 font-size: 25px;
-line-height: 38px;
 color: #271c1c;
-
 }
-.contact_body{
-    position: relative;
-left: 0%;
-right: 1.83%;
-top: 0%;
-bottom: 26.32%;
+
+/* Right side */
+.contact_heading{
 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-style: normal;
-font-weight: 500;
 font-size: 15px;
-line-height: 14px;
 color: #DDCBCB;
 }
-.co_body{
-position: relative;
 
-}
-.contact_input{
-position: relative;
-width: 200px;
-height: 396px;
-left: 850px;
-top: 230px;
+.contact_body{
+justify-content: center !important;
+flex-direction: column;
 border: none;
+margin-left: 7rem;
 }
 
-.co_input4{
- position: relative;
-width: 250px;
-height: 30px;
-left: 270px;
-top: 50px;
-border-radius: .5em;
-padding: 12px 20px;
+.co_input{
+justify-content: center !important;    
+height: 3rem;
+width:16rem;
+border-radius: 10px;
+  
 }
-.co_input2{
-    position:relative;
-    width: 250px;
-    height: 30px;
-    left: 10px;
-    top:50px;
-    border-radius: .5em;
-}
-.co_input3{
-    position:relative;
-    width: 250px;
-    height: 30px;
-    left: 270px;
-    top:0px;
-    border-radius: .5em;
-}
-.co_input1{
-    position:relative;
-    width: 250px;
-    height: 30px;
-    left: 10px;
-    top:0px;
-    border-radius: .5em;
 
-}
-.co_input5{
-    position:relative;
+.co_inputm{
     width: 510px;
     height: 120px;
-    left: 10px;
-    top:100px;
     border-radius: .5em;
 }
-.submit_body{
-    position: relative;
-    top: 475px;
-    left: 1000px;  
-    
-}
+
 .submit_button{
-    background-color: #0062CC;
+    background-color:#006360;
     color: #ffff;
-    border-radius: 1rem;
+    border-radius: 20px;
+    justify-content: center ;
     border: none;
-    width: 10rem;
-    height: 2.5rem;
+    width: 15rem;
+    height: 3rem;
     box-shadow: 4px 4px 12px #05182D, inset 4px 4px 14px rgba(255, 255, 255, 0.25);
     
 }
 .submit_button:hover{
-    color: light blue;
-    background-color: none;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+@media only screen and (max-width: 1300px) {
+
+}
+@media (min-device-width: 20px) and (max-device-width: 500px){
+   
+}
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 600px) {
+    .su__form_container{
+        width: 100vw;
+    }
+    .su__blank_space{
+        visibility: hidden;
+    }
+    .su__main{
+        flex-direction: column-reverse;
+        height: 90vh;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    
+}
+  
+@media only screen and (min-device-width: 320px) and (max-device-width: 
+  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+
+}
+
+
+@media only screen and (device-width: 768px) {
+
 }
