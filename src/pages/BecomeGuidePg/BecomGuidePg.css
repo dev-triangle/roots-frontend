@@ -1,0 +1,87 @@
+    .guide__page__main_container {
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin: 8rem auto;
+    }
+    
+    .guide__place {
+        width: 60%;
+        margin: auto;
+    }
+    
+    .bguide__div {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .form__part__guide {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form__part__guide {
+        color: white;
+    }
+    
+    #demo-simple-select {
+        background-color: white;
+        width: 100%;
+    }
+    
+    #demo-simple-select-label {
+        font-size: 1.2rem;
+        font-weight: bolder;
+        border: none;
+    }
+    
+    .guide_from {
+        width: 100%;
+    }
+    
+    .guide__input,
+    .bguide__div {
+        width: 80%;
+    }
+    
+    .guide_from {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1.2rem;
+    }
+    
+    .guide__input {
+        height: 3rem;
+        border: none;
+        border-radius: 1rem;
+        padding: 2rem;
+        font-size: 2rem;
+    }
+    
+    .bgudide__button {
+        width: 50%;
+        padding: 1.2rem;
+        border-radius: 1rem;
+        font-size: 1.2rem;
+        background: rgb(64, 111, 176);
+        background: linear-gradient(90deg, rgba(64, 111, 176, 1) 27%, rgba(139, 123, 201, 1) 49%, rgba(106, 178, 228, 1) 73%);
+        border: none;
+        outline: none;
+        margin: 1rem;
+        font-size: 2rem;
+        color: white;
+    }
+    
+    .bgudide__button:hover {
+        background: white;
+        color: black;
+        outline: 5px solid rgb(148, 152, 158);
+        ;
+    }
