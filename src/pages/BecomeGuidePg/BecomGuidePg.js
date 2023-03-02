@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./BecomGuidePg.css";
 import MainLayout from "../../components/MainLayout/MainLayout";
-import BecomeGuideForm from "./BecomeGuideForm";
+// import BecomeGuideForm from "./BecomeGuideForm";
 import { MenuItem,Select, InputLabel,FormControl} from "@mui/material";
 import axios from "axios";
 import { baseUrl } from "../../utils/urls";
