@@ -2,21 +2,19 @@ import React, { useEffect, useState } from "react";
 import "./BecomGuidePg.css";
 import MainLayout from "../../components/MainLayout/MainLayout";
 import BecomeGuideForm from "./BecomeGuideForm";
-import { MenuItem,Select, InputLabel,FormControl} from "@mui/material";
+import { MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 import axios from "axios";
 import { baseUrl } from "../../utils/urls";
-import './BecomGuidePg.css'
+import "./BecomGuidePg.css";
 const BecomGuidePg = () => {
-  const [placeId,setPlaceId]=useState()
-  const[places,setPlaces]=useState([]);
-  const handleChange=()=>{
-
-  }
-  useEffect(()=>{
-    axios.get(`${baseUrl}/places/`).then((res)=>{
+  const [placeId, setPlaceId] = useState();
+  const [places, setPlaces] = useState([]);
+  const handleChange = () => {};
+  useEffect(() => {
+    axios.get(`${baseUrl}/places/`).then((res) => {
       setPlaces(res.data);
-    })
-  },[])
+    });
+  }, []);
   return (
     <MainLayout>
       <div className="guide__page__main_container">
@@ -42,8 +40,23 @@ const BecomGuidePg = () => {
               
             </Select> */}
 
+            <select name="cars" id="cars">
+              {places.map((place, index) => {
+                return (
+                  <option
+                    key={index}
+                    value={place.id}
+                    onChange={(e) => {
+                      setPlaceId(e.target.value);
+                    }}
+                  >
+                    {place.place_name}
+                  </option>
+                );
+              })}
+            </select>
           </FormControl>
-          <BecomeGuideForm  placeId={placeId}/>
+          <BecomeGuideForm placeId={placeId} />
         </div>
       </div>
     </MainLayout>
