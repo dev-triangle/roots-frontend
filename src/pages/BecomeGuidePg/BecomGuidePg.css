@@ -1,87 +1,222 @@
-    .guide__page__main_container {
-        display: flex;
-        width: 80%;
-        justify-content: center;
-        align-items: center;
-        margin: 8rem auto;
+.guide_main{
+    /* background:linear-gradient(104.98deg, #1B3747 , #0C1E27);  */
+    /* width:100%;
+    height:100vh ;
+    min-height: 100vh; */
+    width: 100vw;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    font-family: Poppins;
+}
+.guide_img{
+width: 50vw;
+height: 90vh;
+background-image: url('../../assets/png/guide.png');
+background-repeat: no-repeat;
+background-size: cover;
+}
+.g_rightside{
+    width: 50vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: #1C3747;
+}
+
+.g_container{
+  box-sizing: border-box;
+  width: 421px;
+  height: 340px;
+  margin: 12rem 52rem;
+  border-radius: 0.5rem;
+  background-image: repeating-linear-gradient(180deg, #ffffff, #ffffff 14px, transparent 14px, transparent 22px, #ffffff 22px), repeating-linear-gradient(270deg, #ffffff, #ffffff 14px, transparent 14px, transparent 22px, #ffffff 22px), repeating-linear-gradient(0deg, #ffffff, #ffffff 14px, transparent 14px, transparent 22px, #ffffff 22px), repeating-linear-gradient(90deg, #ffffff, #ffffff 14px, transparent 14px, transparent 22px, #ffffff 22px);
+background-size: 1px calc(100% + 22px), calc(100% + 22px) 1px, 1px calc(100% + 22px) , calc(100% + 22px) 1px;
+background-position: 0 0, 0 0, 100% 0, 0 100%;
+background-repeat: no-repeat;
+  padding: 20px 20px 20px 20px;
+  }
+
+.g_heading{
+    /* font-family: 'Poppins'; */
+    /* font-weight: 500; */
+    font-size: 30px;
+    color: #FFFFFF;
     }
+
+.gu_input1{
+width: 310px;
+height: 30px;
+margin: 2rem 2rem;
+background: transparent;
+border: 3px solid #494747;
+border-radius: 4px;
+
+
+}
+.gu_input2{
+     
+  width: 310px;
+  height: 30px;
+  margin: 0rem 2rem;
+  background: transparent;
+  border: 3px solid #494747;
+  border-radius: 4px;
+  }
+  .gu_input3{
+   
+  width: 140px;
+  height: 30px;
+ margin: 1rem 2rem;
+  background: transparent;
+  border: 3px solid #494747;
+  border-radius: 4px;
+  }
+  .gu_input4{
+   
+  width: 140px;
+  height: 30px;
+ margin: 1rem 0rem;
+  background: transparent;
+  border: 3px solid #494747;
+  border-radius: 4px;
+  }  
+  .gu_input6{
+   
+  width: 140px;
+  height: 30px;
+  margin: 1rem 0rem;
+  background: transparent;
+  border: 3px solid #494747;
+  border-radius: 4px;
+  } 
+  .gu_input5{
+  
+  width: 140px;
+  height: 30px;
+  margin: 1rem 2rem;
+  background: transparent;
+  border: 3px solid #494747;
+  border-radius: 4px;
+  }
+.g_button{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 40px;
+width: 19.5rem;
+height: 3rem;
+margin: 0rem 2rem;
+background: #006360;
+border-radius: 5px;
+border-color: #FFFFFF;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 26px;
+letter-spacing: 0.01em;
+color: #FFFFFF;
+border: none;
+}  
+.g_dot1{
+    /* position: absolute; */
+width: 21px;
+height: 21px;
+left: 52px;
+top: 20px;
+border-radius: 1em;
+border: 1px solid #FFFFFF;
+}
+.gl_dot1{
+    /* position: absolute; */
+    width: 89px;
+    height: 30px;
+    left: 80px;
+    top: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+.g_dot2{
+    /* position: absolute; */
+width: 21px;
+height: 21px;
+left: 202px;
+top: 20px;
+border-radius: 1em;
+border: 1px solid #FFFFFF;
+}
+.gl_dot2{
+    /* position: absolute; */
+    width: 89px;
+    height: 30px;
+    left: 230px;
+    top: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+
+@media only screen and (max-width: 1300px) {
+
+}
+@media (min-device-width: 20px) and (max-device-width: 500px){
+   
+}
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 600px) {
+    .g_rightside{
+        width: 100vw;
+    }
+    .guide_img{
+        visibility: hidden;
+    }
+    .guide_main{
+        flex-direction: column-reverse;
+        height: 90vh;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
     
-    .guide__place {
-        width: 60%;
-        margin: auto;
-    }
-    
-    .bguide__div {
-        width: 80%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .form__part__guide {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .form__part__guide {
-        color: white;
-    }
-    
-    #demo-simple-select {
-        background-color: white;
-        width: 100%;
-    }
-    
-    #demo-simple-select-label {
-        font-size: 1.2rem;
-        font-weight: bolder;
-        border: none;
-    }
-    
-    .guide_from {
-        width: 100%;
-    }
-    
-    .guide__input,
-    .bguide__div {
-        width: 80%;
-    }
-    
-    .guide_from {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 1.2rem;
-    }
-    
-    .guide__input {
-        height: 3rem;
-        border: none;
-        border-radius: 1rem;
-        padding: 2rem;
-        font-size: 2rem;
-    }
-    
-    .bgudide__button {
-        width: 50%;
-        padding: 1.2rem;
-        border-radius: 1rem;
-        font-size: 1.2rem;
-        background: rgb(64, 111, 176);
-        background: linear-gradient(90deg, rgba(64, 111, 176, 1) 27%, rgba(139, 123, 201, 1) 49%, rgba(106, 178, 228, 1) 73%);
-        border: none;
-        outline: none;
-        margin: 1rem;
-        font-size: 2rem;
-        color: white;
-    }
-    
-    .bgudide__button:hover {
-        background: white;
-        color: black;
-        outline: 5px solid rgb(148, 152, 158);
-        ;
-    }
+}
+  
+@media only screen and (min-device-width: 320px) and (max-device-width: 
+  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+
+}
+
+
+@media only screen and (device-width: 768px) {
+
+}
