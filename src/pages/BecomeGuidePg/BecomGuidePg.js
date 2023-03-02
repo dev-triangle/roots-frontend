@@ -23,11 +23,11 @@ const BecomGuidePg = () => {
         <div className="form__part__guide">
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Place</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={placeId}
-              label="placeId"
+            {/* <Select
+               size="small"
+               label={"name"}
+               variant="filled"
+               sx={{color:  "#094C83", backgroundColor: "#99D9F6" }}
               onChange={handleChange}
             >
               {places.map((place,index)=>{
@@ -38,7 +38,8 @@ const BecomGuidePg = () => {
                 )
               })}
               
-            </Select>
+            </Select> */}
+
           </FormControl>
           <BecomeGuideForm  placeId={placeId}/>
         </div>
