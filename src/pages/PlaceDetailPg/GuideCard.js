@@ -29,6 +29,7 @@ const GuideCard = ({ gender, name, desc, age, contact, addres }) => {
           <img className="guide_display_image"
             src="https://www.w3schools.com/howto/img_avatar2.png"
             alt=" "
+            
           />
           <p>
             Name: <span>{name}</span>

@@ -1,17 +1,33 @@
 .place__detail_page_container{
     display: flex;
     width: 100%;
-    padding: 3rem;
+   justify-content: center;
+   align-items: center;
     flex-direction: column;
-    gap: 3rem;
-    justify-content: center;
-    align-items: center;
     background: linear-gradient(104.98deg, #2A4E64 2.26%, #0C1E27 93.54%), linear-gradient(104.98deg, #27315A 2.26%, #000000 93.54%);
+   
+    
+
+}
+
+.image_place{
+  background: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    width: 100%;
+    top: 0px;
+    background-position: center;
 }
 .place__detail_page_container h1{
-    color: rgb(250, 248, 248);
-    font-size: 8rem;
-    font-family: antonio;
+  position: absolute;
+  color: rgb(250, 248, 248);
+  font-size: 8rem;
+  font-family: 'antonio';
+  top: 30rem;
+  left: 5rem;
+  text-transform: capitalize;
+  
+
    
 
 }
@@ -19,6 +35,8 @@
   color: rgb(250, 248, 248);
   font-size: 2rem;
   font-family: antonio;
+  justify-content: center;
+  align-items: center;
 
 }
 .place__detail_image{
@@ -158,6 +176,7 @@
     border-radius: 50%;
     height: 10rem;
     width: 10rem;
+    background: none;
   }
   /* .guide__card_main{
      background-color: #005b20;

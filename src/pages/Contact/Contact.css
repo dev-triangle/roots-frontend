@@ -101,10 +101,13 @@ border-radius: 10px;
 }
 
 .submit_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color:#006360;
     color: #ffff;
     border-radius: 20px;
-    justify-content: center !important ;
+    
     border: none;
     width: 15rem;
     height: 3rem;

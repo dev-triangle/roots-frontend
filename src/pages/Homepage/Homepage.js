@@ -18,9 +18,7 @@ const Homepage = () => {
             </div>
             <br></br>
             <div className="home__intro">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              nunc, tortor mauris eget ut integer sit. Purus consequat urna
-              vulputate turpis blandit sed.
+             To Root the world
             </div>
             <Button className="home__button" onClick={()=>{
               navigate('/places')

@@ -42,15 +42,17 @@ const PlaceDetailPg = () => {
   }, []);
   return (
     <MainLayout>
-      <div className="place__detail_page_container">
+      <div className="place__detail_page_container" >
+        <div className="image_place"
+        style={{ backgroundImage: `url(${place.place_image})` }}></div>
         <h1 className="place_name">{place.place_name}</h1>
         <div className="place__detail_content">
-          <img
-            className="place__detail_image"
+          {/* <img
+            className="place_detail_image"
             src={place.place_image}
             alt="place_image"
-          />
-          <p>{place.place_description}</p>
+          /> */}
+          {/* <p>{place.place_description}</p> */}
         </div>
 
         <div className="place__activites">

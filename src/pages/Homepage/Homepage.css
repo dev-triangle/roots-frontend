@@ -32,7 +32,7 @@
 
 .home__intro {
     font-family: "Work Sans";
-    color: white;
+    color: rgb(163, 158, 158);
     font-size: 2.2rem;
 }
 
@@ -43,10 +43,9 @@
     cursor: pointer;
     border-radius: 1rem;
     color: #bcd3e2;
-    padding: 1rem;
+    padding: 0.95rem;
     font-display: center;
     font-size: 1.2rem;
-    background: rgb(64, 111, 176);
     box-shadow: 4px 4px 12px #05182D, inset 4px 4px 14px rgba(255, 255, 255, 0.25);
 }
 .home__button:hover{

@@ -25,14 +25,12 @@
     padding: 1rem;
     align-items: center;
     gap: 1rem;
-    background: rgba(254, 245, 245, 0.09);
+    background: rgba(254, 245, 245, 0.09) 10px;
 backdrop-filter: blur(39px);
-border-width: 3px;
-border-color:rgba(0, 148, 144, 1);
-
+border: 3px solid white;
 /* Note: backdrop-filter has minimal browser support */
 
-border-radius: 10px;
+
 }
 
 .place__card_pimg {
