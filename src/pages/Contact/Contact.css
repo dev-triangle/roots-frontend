@@ -2,8 +2,19 @@
     width: 100vw;
     min-height: 90vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     font-family: Poppins;
+    align-items: center;
+    padding-top:2rem;
+}
+
+
+.contact__content{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
 }
 .su__blank_space{
     width: 50vw;
@@ -16,7 +27,8 @@
 }
 .su__form_container{
     width: 50vw;
-    height: 90vh;
+    /* height: 90vh; */
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,10 +37,10 @@
     background-color: #1C3747;
 }
 
-.Contact{
+.contact__main_title{
 font-family: 'Playfair Display';
 font-weight: 700;
-font-size: 5rem;
+font-size: 3rem;
 color: #262525;
 }
 .contact_byline{
