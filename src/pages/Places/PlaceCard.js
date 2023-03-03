@@ -16,10 +16,10 @@ const PlaceCard = ({placeName, placeImage,placeDesc,placeId}) => {
         <div className="place__card__btns">
             <button onClick={()=>{
                 setOpen(true);
-            }}  className='place__card_v_btn place__card__cbt'>View Details</button>
+            }}  className='place__card_v_btn place__card__cbt'>View</button>
             <button className='place__card_b_btn place__card__cbt' onClick={()=>{
                 navigate(`/places/${placeId}`)
-            }}>Book Package</button>
+            }}>Book </button>
         </div>
     </div>
   )

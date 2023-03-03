@@ -15,14 +15,14 @@
   
   .attraction__card_body{
     display: flex;
-   width: 320px;
+   width: 268px;
     /* height: 240px; */
     background-color: #ffff;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    border-radius: 20px;
-    padding: 1rem;
+    border-radius: 30px;
+    padding: 2rem;
   }
   
   .attraction__card_body img{

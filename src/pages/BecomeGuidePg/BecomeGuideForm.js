@@ -52,8 +52,8 @@ const BecomeGuideForm = () => {
       );
   };
   return (
-    <form onSubmit={becomeGuide}>
-      <select required name="" id="" value={placeId} onChange={selectDropDown}>
+    <form onSubmit={becomeGuide} className="form_guide">
+      <select required name="" id="" classNmae="form_container" value={placeId} onChange={selectDropDown}>
         {places.map((place, index) => {
           return (
             <option key={index} value={parseInt(place.id)}>
@@ -63,6 +63,7 @@ const BecomeGuideForm = () => {
         })}
       </select>
       <input
+        className="guide_input"
         required
         type="text"
         placeholder="Name"
@@ -72,6 +73,7 @@ const BecomeGuideForm = () => {
         }}
       />
       <input
+        className="guide_input"
         required
         type="text"
         placeholder="Description"
@@ -81,6 +83,7 @@ const BecomeGuideForm = () => {
         }}
       />
       <input
+        className="guide_input"
         required
         type="text"
         placeholder="Phone Number"
@@ -90,6 +93,7 @@ const BecomeGuideForm = () => {
         }}
       />
       <input
+        className="guide_input"
         required
         type="text"
         placeholder="address"
@@ -99,6 +103,7 @@ const BecomeGuideForm = () => {
         }}
       />
       <input
+      className="guide_input"
         required
         type="number"
         placeholder="age"
@@ -109,6 +114,7 @@ const BecomeGuideForm = () => {
       />
       <div>
         <input
+        className="guide_radio"
           required
           type="radio"
           id="male_radio"
@@ -123,6 +129,7 @@ const BecomeGuideForm = () => {
 
       <div>
         <input
+        className="guide_radio"
           required
           type="radio"
           id="female_radio"
@@ -137,6 +144,7 @@ const BecomeGuideForm = () => {
 
       <div>
         <input
+        className="guide_radio"
           required
           type="radio"
           id="others_radio"
@@ -148,7 +156,7 @@ const BecomeGuideForm = () => {
         />
         <label for="louie">Other</label>
       </div>
-      <button type="submit">submit</button>
+      <button type="submit" className="g_button">submit</button>
     </form>
   );
 };

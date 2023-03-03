@@ -1,11 +1,12 @@
 import React from "react";
 import { Card } from "@mui/material";
+import "./PlaceDetailPg.css";
 const GuideCard = ({ gender, name, desc, age, contact, addres }) => {
   if (gender === "Male") {
     return (
       <Card>
         <div className="guide__card_main">
-          <img
+          <img className="guide_display_image"
             src="https://www.w3schools.com/howto/img_avatar.png"
             alt=" "
           />
@@ -25,7 +26,7 @@ const GuideCard = ({ gender, name, desc, age, contact, addres }) => {
     return (
       <Card>
         <div className="guide__card_main">
-          <img
+          <img className="guide_display_image"
             src="https://www.w3schools.com/howto/img_avatar2.png"
             alt=" "
           />

@@ -10,7 +10,8 @@ const BecomGuidePg = () => {
       <div className="guide__page__main_container">
         <img src="" alt="" className="guide__vector" />
         <div className="form__part__guide">
-          <InputLabel id="demo-simple-select-label">Place</InputLabel>
+          <h1>Be a Guide</h1>
+          <InputLabel id="demo-simple-select-label" className="guide_heading">Place</InputLabel>
           <BecomeGuideForm />
         </div>
       </div>

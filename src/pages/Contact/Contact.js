@@ -93,7 +93,7 @@ const Contact = () => {
                   setMessage(e.target.value);
                 }}
               />
-              <button type="submit">Submit</button>
+              <button type="submit" className="submit_button">Submit</button>
             </form>
           </div>
         </div>

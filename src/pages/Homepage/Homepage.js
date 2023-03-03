@@ -9,6 +9,7 @@ const Homepage = () => {
   const navigate = useNavigate();
   return (
     <MainLayout>
+       <Stars>
       <div className="home__container">
         <div className="home__innercontainer">
           <div className="home__content">
@@ -33,6 +34,7 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+      </Stars>
     </MainLayout>
   );
 };

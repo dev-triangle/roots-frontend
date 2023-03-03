@@ -43,10 +43,10 @@ const PlaceDetailPg = () => {
   return (
     <MainLayout>
       <div className="place__detail_page_container">
-        <h1>{place.place_name}</h1>
+        <h1 className="place_name">{place.place_name}</h1>
         <div className="place__detail_content">
           <img
-            className="place__image"
+            className="place__detail_image"
             src={place.place_image}
             alt="place_image"
           />
@@ -54,7 +54,7 @@ const PlaceDetailPg = () => {
         </div>
 
         <div className="place__activites">
-          <h1>Destinations</h1>
+          <h2>Destinations</h2>
 
           {activities.map((activity, index) =>
             activity.place_foreign === parseInt(place_id) ? (
@@ -68,7 +68,7 @@ const PlaceDetailPg = () => {
         </div>
 
         <div className="festivals__section">
-          <h1>Festivals</h1>
+          <h2>Festivals</h2>
           <div className="festivals__container">
             {festivals.map((fest, index) =>
               fest.place_foreign === parseInt(place_id) ? (
