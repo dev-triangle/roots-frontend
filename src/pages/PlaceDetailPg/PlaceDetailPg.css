@@ -135,9 +135,28 @@
 
 .festival__card_body p {
     font-family: var(--primary-font);
+
 }
 
 @media all and (max-width: 500px) {
+  }
+  
+.guide__main_body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+  .guides__cards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  @media all and (max-width: 500px) 
     .act__card-list {
         /* On small screens, we are no longer using row direction but column */
         flex-direction: column;
