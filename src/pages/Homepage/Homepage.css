@@ -7,7 +7,7 @@
     min-height: 100vh;
     background-color: #462727;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-image: url("../../assets/png/Bgroot.png");
 }
 
@@ -40,6 +40,7 @@
     width: 10rem;
     border: none;
     background: #006dd1;
+    cursor: pointer;
     border-radius: 1rem;
     color: #bcd3e2;
     padding: 1rem;

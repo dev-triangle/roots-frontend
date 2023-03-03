@@ -83,7 +83,7 @@ const PlaceDetailPg = () => {
         </div>
 
         <Attractions/>
-        <GuidesSection placeName={place.place_name}/>
+        <GuidesSection placeId={place_id}/>
 
       </div>
     </MainLayout>

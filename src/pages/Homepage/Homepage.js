@@ -4,8 +4,9 @@ import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../../components/MainLayout/MainLayout";
 import { Button } from "react-bootstrap";
+import Stars from "../../components/Stars/Stars";
 const Homepage = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   return (
     <MainLayout>
       <div className="home__container">
@@ -16,7 +17,9 @@ const Homepage = () => {
             </div>
             <br></br>
             <div className="home__intro">
-              To root the world
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              nunc, tortor mauris eget ut integer sit. Purus consequat urna
+              vulputate turpis blandit sed.
             </div>
             <Button className="home__button" onClick={()=>{
               navigate('/places')

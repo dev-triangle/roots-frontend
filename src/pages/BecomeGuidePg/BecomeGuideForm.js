@@ -1,152 +1,156 @@
-import React, { Component } from "react";
-import { Form } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import { baseUrl } from "../../utils/urls";
+import React, { useState, useEffect } from "react";
 import axiosInstance from "../../auth/authHandler";
-export class BecomeGuideForm extends Component {
-  state = {
-    name: "",
-    guideImg: null,
-    image: null,
-    desc: "",
-    age: null,
-    gender: null,
-    contact: "",
-    address: "",
-    user_foreign: localStorage.getItem("userid"),
-    place_foreign: this.props.placeId,
+import { baseUrl } from "../../utils/urls";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+const BecomeGuideForm = () => {
+  const [name, setName] = useState("");
+  const [desc, setDesc] = useState("");
+  const [contact, setContact] = useState("");
+  const [address, setAddress] = useState("");
+  const [age, setAge] = useState();
+  const [gender, setGender] = useState("");
+  const [places, setPlaces] = useState([]);
+  const [placeId, setPlaceId] = useState();
+  const navigate = useNavigate();
+  useEffect(() => {
+    axios.get(`${baseUrl}/places/`).then((res) => {
+      console.log(res.data);
+      setPlaces(res.data);
+    });
+  }, []);
+
+  const selectDropDown = (event) => {
+    setPlaceId(event.target.value);
   };
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.id]: e.target.value,
-    });
-  };
-
-  handleImageChange = (e) => {
-    this.setState({
-      guideImg: e.target.files[0],
-      image: e.target.files[0],
-    });
-  };
-  handleSubmit = (e) => {
+  const becomeGuide = (e) => {
     e.preventDefault();
-    console.log(this.state);
-    let form_data = new FormData();
-    // form_data.append('user_image', this.state.user_image, this.state.user_image.name);
-    // form_data.append('guide_image', this.state.guideImg, this.state.guideImg.name);
-    form_data.append('user_foreign', this.state.user_foreign);
-    form_data.append('name', this.state.name);
-    form_data.append('image', this.state.image, this.state.image.name);
-    form_data.append('place_foreign', this.state.place_foreign);
-    form_data.append('desc', this.state.desc);
-    form_data.append('age', this.state.age);
-    form_data.append('gender', this.state.gender);
-    form_data.append('contact', this.state.contact);
-    form_data.append('address', this.state.address);
-    let url = `${baseUrl}/guides/`;
-
-    axiosInstance.post(url, form_data, {
-      headers: {
-        'content-type': 'multipart/form-data'
-      }
-    })
-        .then(res => {
-          console.log(res.data);
-        })
-        .catch(err => console.log(err))
+    axiosInstance
+      .post(`${baseUrl}/guides/`, {
+        name: name,
+        desc: desc,
+        age: age,
+        gender: gender,
+        contact: contact,
+        address: address,
+        user_foreign: window.localStorage.getItem("userId"),
+        place_foreign: placeId,
+      })
+      .then(
+        (response) => {
+          if (response.status === 201) {
+            toast.success("Successfully registered as the Guide....");
+            navigate("/");
+          }
+        },
+        (error) => {
+          toast.error("Something went wrong");
+          console.log(error);
+        }
+      );
   };
-  render() {
-    return (
-      <Form onSubmit={this.handleSubmit}>
-        <Form.Group>
-          <Form.Control
-            type="text"
-            placeholder="Name *"
-            name="name"
-            id="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-          />
-        </Form.Group>
-        <br />
-        <Form.Group>
-          <Form.Control
-            type="file"
-            placeholder="pic"
-            name="guideImg"
-            id="guideImg"
-            accept=".jpg, .jpeg, .png"
-            onChange={this.handleImageChange}
-          />
-        </Form.Group>
-        <br />
-        <Form.Group>
-          <Form.Control
-            type="text"
-            placeholder="Description *"
-            name="desc"
-            id="desc"
-            value={this.state.desc}
-            onChange={this.handleChange}
-          />
-        </Form.Group>
-        <br />
-        <Form.Group>
-          <Form.Control
-            type="number"
-            placeholder="Age *"
-            name="age"
-            id="age"
-            value={this.state.age}
-            onChange={this.handleChange}
-          />
-        </Form.Group>
-        <br />
-        <Form.Group>
-          <Form.Control
-            type="text"
-            placeholder="Gender *"
-            name="gender"
-            id="gender"
-            value={this.state.gender}
-            onChange={this.handleChange}
-          />
-        </Form.Group>
-        <br />
-        <Form.Group>
-          <Form.Control
-            type="text"
-            placeholder="Contact *"
-            name="contact"
-            id="contact"
-            value={this.state.contact}
-            onChange={this.handleChange}
-          />
-        </Form.Group>
-        <br />
-        <Form.Group>
-          <Form.Control
-            type="text"
-            placeholder="Address *"
-            name="address"
-            id="address"
-            value={this.state.address}
-            onChange={this.handleChange}
-          />
-        </Form.Group>
-        <br />
-        <Button
-          onClick={this.handleSubmit}
-          variant="success"
-          type="submit"
-          block
-        >
-          Submit
-        </Button>
-      </Form>
-    );
-  }
-}
+  return (
+    <form onSubmit={becomeGuide}>
+      <select required name="" id="" value={placeId} onChange={selectDropDown}>
+        {places.map((place, index) => {
+          return (
+            <option key={index} value={parseInt(place.id)}>
+              {place.place_name}
+            </option>
+          );
+        })}
+      </select>
+      <input
+        required
+        type="text"
+        placeholder="Name"
+        value={name}
+        onChange={(e) => {
+          setName(e.target.value);
+        }}
+      />
+      <input
+        required
+        type="text"
+        placeholder="Description"
+        value={desc}
+        onChange={(e) => {
+          setDesc(e.target.value);
+        }}
+      />
+      <input
+        required
+        type="text"
+        placeholder="Phone Number"
+        value={contact}
+        onChange={(e) => {
+          setContact(e.target.value);
+        }}
+      />
+      <input
+        required
+        type="text"
+        placeholder="address"
+        value={address}
+        onChange={(e) => {
+          setAddress(e.target.value);
+        }}
+      />
+      <input
+        required
+        type="number"
+        placeholder="age"
+        value={age}
+        onChange={(e) => {
+          setAge(e.target.value);
+        }}
+      />
+      <div>
+        <input
+          required
+          type="radio"
+          id="male_radio"
+          name="gender"
+          value="Male"
+          onChange={(e) => {
+            setGender(e.target.value);
+          }}
+        />
+        <label for="huey">Male</label>
+      </div>
+
+      <div>
+        <input
+          required
+          type="radio"
+          id="female_radio"
+          name="gender"
+          value="Female"
+          onChange={(e) => {
+            setGender(e.target.value);
+          }}
+        />
+        <label for="dewey">Female</label>
+      </div>
+
+      <div>
+        <input
+          required
+          type="radio"
+          id="others_radio"
+          name="gender"
+          value="Others"
+          onChange={(e) => {
+            setGender(e.target.value);
+          }}
+        />
+        <label for="louie">Other</label>
+      </div>
+      <button type="submit">submit</button>
+    </form>
+  );
+};
 
 export default BecomeGuideForm;

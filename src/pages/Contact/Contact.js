@@ -1,36 +1,105 @@
-import React from 'react'
-import MainLayout from '../../components/MainLayout/MainLayout'
-// import MainLayout from '../../components/MainLayout/MainLayout'
-// import { Link } from 'react-router-dom'
-import './Contact.css'
+import React, { useState } from "react";
+import MainLayout from "../../components/MainLayout/MainLayout";
+import "./Contact.css";
+import axios from "axios";
+import { baseUrl } from "../../utils/urls";
+import { toast } from "react-hot-toast";
 const Contact = () => {
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [email, setEmail] = useState("");
+
+  const contactSubmit = (e) => {
+    e.preventDefault();
+    axios.post(`${baseUrl}/contacts/`,
+    {
+      first_name: fname,
+      last_name: lname,
+      email: email,
+      subject: subject,
+      message: message
+  }).then((response)=>{
+    if(response.status===201){
+      toast.success("Message sent successfully!!!")
+      window.location.reload();
+    }
+  },(error)=>{
+    toast.error('Something went wrong')
+  })
+  };
   return (
     <MainLayout>
-        <div className='su__main'>
-          <div className="su__blank_space">
-            <p className='Contact'>Contact</p>
-            <p className='contact_byline'>we would love to hear from you</p>
-            <p className='getin'>Get in touch</p>
-            <p className='san'>@sanoshjacob</p>
-          </div>
+      <div className="su__main">
 
-          <div className="su__form_container"> 
-                <p className='contact_heading'>PLEASE, FEEL YOURSELF COMFORTABLE TO FILL IN OUR CONTACT FORM</p>
-        
-                <div className='contact_body'>
-              
-                  <input className='co_input' type='text'   placeholder='First name' required/>
-                  <input className='co_input' type="text"   placeholder='Last name' required/>
-                  <input className='co_input' type="text"   placeholder='E-mail' required/>
-                  <input className='co_input' type="text"   placeholder='Subject' required/>
-                  <input className='co_inputm' type="text" placeholder='Message' required/>
-                      
-                </div>
-               <div className='submit_button' type='submit'>Submit</div> 
+
+      <p className="contact__main_title">Contact</p>
+     
+        <div className="su__form_container">
+          <p className="contact_heading">
+            PLEASE, FEEL YOURSELF COMFORTABLE TO FILL IN OUR CONTACT FORM
+          </p>
+
+          <div className="contact_body">
+            <form onSubmit={contactSubmit}>
+              <input
+                className="co_input"
+                type="text"
+                placeholder="First name"
+                required
+                value={fname}
+                onChange={(e) => {
+                  setFname(e.target.value);
+                }}
+              />
+              <input
+                className="co_input"
+                type="text"
+                placeholder="Last name"
+                required
+                value={lname}
+                onChange={(e) => {
+                  setLname(e.target.value);
+                }}
+              />
+              <input
+                className="co_input"
+                type="text"
+                placeholder="E-mail"
+                required
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+              />
+              <input
+                className="co_input"
+                type="text"
+                placeholder="Subject"
+                required
+                value={subject}
+                onChange={(e) => {
+                  setSubject(e.target.value);
+                }}
+              />
+              <input
+                className="co_inputm"
+                type="text"
+                placeholder="Message"
+                required
+                value={message}
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
+              />
+              <button type="submit">Submit</button>
+            </form>
           </div>
         </div>
+      </div>
     </MainLayout>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
