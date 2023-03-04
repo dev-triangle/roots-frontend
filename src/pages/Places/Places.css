@@ -9,13 +9,25 @@
 
 .places__cards_container {
     display: flex;
+    gap: 1rem;
     width: 100%;
     padding: 3rem;
     align-items: center;
     justify-content: center;
 }
 
-.place__card {
+.place__card__content {
+    z-index: 1;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+}
+
+
+/* .place__card {
     width: 20rem;
     height: 25rem;
     margin: 1rem;
@@ -25,12 +37,49 @@
     padding: 1rem;
     align-items: center;
     gap: 1rem;
-    background: rgba(254, 245, 245, 0.09) 10px;
-backdrop-filter: blur(39px);
-border: 3px solid white;
-/* Note: backdrop-filter has minimal browser support */
+    background: rgba(254, 245, 245, 0.09);
+   
+    border: 3px solid white;
+    border-radius: 1rem;
+   
+} */
 
+.place__card {
+    width: 20rem;
+    height: 25rem;
+    background: #07182E;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
 
+.place__card::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 6s linear infinite;
+    transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.place__card::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    inset: 5px;
+    border-radius: 15px;
 }
 
 .place__card_pimg {
@@ -46,11 +95,12 @@ border: 3px solid white;
     font-family: system-ui;
 }
 
-.place__card_v_btn {
+
+/* .place__card_v_btn {
     background-color: rgba(254, 245, 245, 0.09);
     border: 1px solid #ffff;
     color: #ffff;
-    /* width: 3rem; */
+  
     display: flex;
     width: fit-content;
     height: 2rem;
@@ -58,10 +108,10 @@ border: 3px solid white;
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
-    
-}
+} */
 
-.place__card_b_btn {
+
+/* .place__card_b_btn {
     color: #ffff;
     background: #006360;
     display: flex;
@@ -71,9 +121,8 @@ border: 3px solid white;
     align-items: center;
     padding: 0.5rem;
     font-size: 1rem;
-    
     border: #006360;
-}
+} */
 
 .place__card__btns {
     width: 100%;
@@ -82,20 +131,92 @@ border: 3px solid white;
     justify-content: space-evenly;
 }
 
-.place__card__cbt {
-    padding: 1.8rem;
-    width: 50%;
-    margin: 1rem;
-    border: none;
+
+/* .place__card__cbt {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #149CEA;
     outline: none;
-    box-shadow: rgb(17 17 26 / 10%) 0px 4px 16px, rgb(17 17 26 / 5%) 0px 8px 32px;
-    background: rgba(0, 99, 96, 1);
-    transition: height 1s ease-in-out 0ms;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+} */
+
+.place__card__cbt {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    position: relative;
+    font-size: 17px;
+    background: #333;
+    border: none;
+    color: #fff;
 }
 
 .place__card__cbt:hover {
-    box-shadow: 0 10px 10px 0 rgba(209, 207, 207, 0.24),0 17px 50px 0 rgba(255, 253, 253, 0.19);
-    height: 2rem;
+    letter-spacing: 0.25em;
+    background: #546dc7;
+    color: #4b49da;
+    box-shadow: 0 0 45px #546dc7;
+}
+
+.place__card__cbt::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #222222;
+}
+
+.place__card__cbt span {
+    position: relative;
+    z-index: 1;
+}
+
+.place__card__cbt i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.place__card__cbt i::before {
+    content: '';
+    position: absolute;
+    border: 2px solid #546dc7;
+    width: 7px;
+    height: 4px;
+    top: -3.5px;
+    left: 80%;
+    background: #222222;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.place__card__cbt:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+.place__card__cbt i::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #546dc7;
+    width: 7px;
+    height: 4px;
+    bottom: -3.5px;
+    left: 20%;
+    background: #222222;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.place__card__cbt:hover i::after {
+    width: 20px;
+    left: 80%;
 }
 
 .places__main__heading {
@@ -103,7 +224,6 @@ border: 3px solid white;
     font-size: 3rem;
     font-family: Antonio;
     font-weight: bold;
-   
 }
 
 @media (min-device-width: 800px) and (max-device-width: 1200px) {
