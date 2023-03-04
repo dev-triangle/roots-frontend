@@ -9,35 +9,29 @@ const Homepage = () => {
   const navigate = useNavigate();
   return (
     <MainLayout>
-      <Stars>
-        <div className="home__container">
-          <div className="home__innercontainer">
-            <div className="home__content">
-              <div className="home__title">
-                <span className="Font">R</span>OOT
-                <span className="Font">S</span>
-              </div>
-              <br></br>
-              <div className="home__intro">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                nunc, tortor mauris eget ut integer sit. Purus consequat urna
-                vulputate turpis blandit sed.
-              </div>
-              <Button
-                className="home__button"
-                onClick={() => {
-                  navigate("/places");
-                }}
-              >
-                EXPLORE
-                <i className="arrow_icon">
-                  &nbsp; &nbsp;
-                  <FaArrowRight />
-                </i>
-              </Button>
+       <Stars>
+      <div className="home__container">
+        <div className="home__innercontainer">
+          <div className="home__content">
+            <div className="home__title">
+              <span className="Font">R</span>OOT<span className="Font">S</span>
             </div>
+            <br></br>
+            <div className="home__intro">
+             To Root the world
+            </div>
+            <Button className="home__button" onClick={()=>{
+              navigate('/places')
+            }}>
+              EXPLORE
+              <i className="arrow_icon">
+                &nbsp; &nbsp;
+                <FaArrowRight />
+              </i>
+            </Button>
           </div>
         </div>
+      </div>
       </Stars>
     </MainLayout>
   );

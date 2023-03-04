@@ -14,7 +14,7 @@ const Attractions = () => {
   });
   return (
     <div className="attractions__section">
-      <h1>Attractions</h1>
+      <h2>Attractions</h2>
       <div className="atrcations__cards_container">
         {attracts.map((attract, index) =>
           attract.place_foreign === parseInt(place_id) ? (
