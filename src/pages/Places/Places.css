@@ -158,12 +158,12 @@
     color: #fff;
 }
 
-.place__card__cbt:hover {
+/* .place__card__cbt:hover {
     letter-spacing: 0.25em;
     background: #546dc7;
     color: #4b49da;
     box-shadow: 0 0 45px #546dc7;
-}
+} */
 
 .place__card__cbt::before {
     content: '';
@@ -196,10 +196,10 @@
     transition: 0.5s;
 }
 
-.place__card__cbt:hover i::before {
+/* .place__card__cbt:hover i::before {
     width: 20px;
     left: 20%;
-}
+} */
 
 .place__card__cbt i::after {
     content: '';
@@ -214,10 +214,10 @@
     transition: 0.5s;
 }
 
-.place__card__cbt:hover i::after {
+/* .place__card__cbt:hover i::after {
     width: 20px;
     left: 80%;
-}
+} */
 
 .places__main__heading {
     color: rgb(255, 254, 253);
