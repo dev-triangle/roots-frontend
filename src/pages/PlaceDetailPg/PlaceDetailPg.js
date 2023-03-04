@@ -29,14 +29,14 @@ const PlaceDetailPg = () => {
         setPlace(response.data);
       },
       (error) => {
-        console.log(error);
+        // console.log(error);
       }
     );
   }, [place_id]);
 
   useEffect(() => {
     axios.get(`${baseUrl}/activities/`).then((res) => {
-      console.log(res);
+      // console.log(res);
       setActivities(res.data);
     });
   }, []);

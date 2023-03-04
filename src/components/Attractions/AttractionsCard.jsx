@@ -38,7 +38,7 @@ const AttractionsCard = ({
 
       }
     },(error)=>{
-      console.log(error)
+      // console.log(error)
     })
   };
   return (

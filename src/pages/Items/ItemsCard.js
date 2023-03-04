@@ -18,7 +18,7 @@ const ItemsCard = ({itemName,itemImage,itemDesc,itemId,userId}) => {
         item_foreign_key: itemId,
         user_foreign: userId
     }).then((response)=>{
-      console.log("purchase: ",response)
+      // console.log("purchase: ",response)
       if(response.status===201){
         toast.success("Succesfully placed the order!!");
       }

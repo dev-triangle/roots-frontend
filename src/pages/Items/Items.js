@@ -12,7 +12,7 @@ const Items = () => {
   useEffect(()=>{
     axios.get(`${baseUrl}/items/`).then((response)=>{
       setItems(response.data);
-      console.log(response.data)
+      // console.log(response.data)
     },error=>{
 
     })
@@ -20,7 +20,7 @@ const Items = () => {
 
  useEffect(()=>{
   axiosInstance.get(`${baseUrl}/current-user/`).then((res)=>{
-    console.log(res)
+    // console.log(res)
     setUserId(res.data.id);
   })
  })

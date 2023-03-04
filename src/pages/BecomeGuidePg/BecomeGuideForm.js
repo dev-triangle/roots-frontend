@@ -16,7 +16,7 @@ const BecomeGuideForm = () => {
   const navigate = useNavigate();
   useEffect(() => {
     axios.get(`${baseUrl}/places/`).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       setPlaces(res.data);
     });
   }, []);
@@ -47,7 +47,7 @@ const BecomeGuideForm = () => {
         },
         (error) => {
           toast.error("Something went wrong");
-          console.log(error);
+          // console.log(error);
         }
       );
   };
