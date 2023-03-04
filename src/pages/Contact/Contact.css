@@ -78,38 +78,27 @@ line-height: 38px;
 color: #271c1c;
 
 }
-.contact_body{
-    position: relative;
-left: 0%;
-right: 1.83%;
-top: 0%;
-bottom: 26.32%;
-font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 14px;
-color: #DDCBCB;
-}
+
 .co_body{
 position: relative;
 
 }
 .contact_input{
-position: relative;
-width: 200px;
-height: 396px;
-left: 850px;
-top: 230px;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 border: none;
+position: relative;
+background: rgba(0,0,0,0,5)
+
 }
 
 .co_input4{
  position: relative;
 width: 250px;
 height: 30px;
-left: 270px;
-top: 50px;
+
 border-radius: .5em;
 padding: 12px 20px;
 }
@@ -117,24 +106,21 @@ padding: 12px 20px;
     position:relative;
     width: 250px;
     height: 30px;
-    left: 10px;
-    top:50px;
+    
     border-radius: .5em;
 }
 .co_input3{
     position:relative;
     width: 250px;
     height: 30px;
-    left: 270px;
-    top:0px;
+  
     border-radius: .5em;
 }
 .co_input1{
     position:relative;
     width: 250px;
     height: 30px;
-    left: 10px;
-    top:0px;
+    
     border-radius: .5em;
 
 }
@@ -142,17 +128,16 @@ padding: 12px 20px;
     position:relative;
     width: 510px;
     height: 120px;
-    left: 10px;
-    top:100px;
+    
     border-radius: .5em;
 }
 .submit_body{
     position: relative;
-    top: 475px;
-    left: 1000px;  
+      
     
 }
 .submit_button{
+    cursor: pointer;
     background-color: #0062CC;
     color: #ffff;
     border-radius: 1rem;
