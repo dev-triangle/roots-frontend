@@ -4,6 +4,7 @@ import { baseUrl } from "../../utils/urls";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import Aos from "aos";
 const BecomeGuideForm = () => {
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
@@ -14,9 +15,12 @@ const BecomeGuideForm = () => {
   const [places, setPlaces] = useState([]);
   const [placeId, setPlaceId] = useState();
   const navigate = useNavigate();
+  useEffect(()=>{
+    Aos.init({duration:700})
+  },[])
   useEffect(() => {
     axios.get(`${baseUrl}/places/`).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       setPlaces(res.data);
     });
   }, []);
@@ -47,12 +51,12 @@ const BecomeGuideForm = () => {
         },
         (error) => {
           toast.error("Something went wrong");
-          console.log(error);
+          // console.log(error);
         }
       );
   };
   return (
-    <form onSubmit={becomeGuide} className="form_guide">
+    <form onSubmit={becomeGuide} className="form_guide" data-aos="fade-up">
       <select required name="" id="" classNmae="form_container" value={placeId} onChange={selectDropDown}>
         {places.map((place, index) => {
           return (

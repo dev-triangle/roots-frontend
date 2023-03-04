@@ -16,12 +16,12 @@ const Signup = () => {
       password:password,
       email:email
     }).then(response=>{
-      console.log(response)
+      // console.log(response)
       if(response.status===201){
         navigate('/login')
       }
     },error=>{
-      console.log(error)
+      // console.log(error)
     })
   }
   return (
