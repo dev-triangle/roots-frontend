@@ -14,16 +14,18 @@ const PlaceCard = ({placeName, placeImage,placeDesc,placeId}) => {
       },[])
   return (
     <div className="place__card" data-aos="zoom-in">
+        <div className="place__card__content">
         <PlaceDetDialog open={open} handleClose={handleClose} setOpen={setOpen} placeDesc={placeDesc} placeImage={placeImage} placeName={placeName}/>
         <img className='place__card_pimg' src={placeImage} alt="place_img" />
         <p className='place__card_pname'>{placeName}</p>
         <div className="place__card__btns">
             <button onClick={()=>{
                 setOpen(true);
-            }}  className='place__card_v_btn place__card__cbt'>View</button>
+            }}  className='place__card_v_btn place__card__cbt'><span>VIEW</span><i></i></button>
             <button className='place__card_b_btn place__card__cbt' onClick={()=>{
                 navigate(`/places/${placeId}`)
-            }}>Book </button>
+            }}><span>BOOK</span><i></i></button>
+        </div>
         </div>
     </div>
   )
