@@ -36,6 +36,18 @@
       border-radius: .4rem;
       background: rgb(63, 61, 106);
       background: linear-gradient(90deg, rgba(63, 61, 106, 1) 36%, rgba(9, 39, 121, 1) 46%, rgba(29, 73, 106, 1) 54%);
+}
+  .attraction__card_body{
+    display: flex;
+   width: 268px;
+    /* height: 240px; */
+    background-color: #ffff;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 30px;
+    padding: 2rem;
+
   }
   
   .attraction__card_body img {

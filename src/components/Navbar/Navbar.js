@@ -55,7 +55,7 @@ function Navbar() {
             CONTACT
           </PageLink>
           <NavLink to="/guide-reg" className="nav__link">
-            BECOME GUIDE
+            GUIDE
           </NavLink>
           {window.localStorage.getItem("access_token") ? (
             <PageLink to="/profile" className="nav__link">

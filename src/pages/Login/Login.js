@@ -14,7 +14,7 @@ const Login = () => {
         "email": email,
         "password" : password
     }).then((res)=>{
-        console.log(res)
+        // console.log(res)
         localStorage.setItem('access_token',res.data.access);
         localStorage.setItem('refresh_token',res.data.refresh);
         axiosInstance.defaults.headers['Authorization']= 'Bearer ' + localStorage.getItem('access_token');

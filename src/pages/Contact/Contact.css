@@ -2,8 +2,19 @@
     width: 100vw;
     min-height: 90vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     font-family: Poppins;
+    align-items: center;
+    padding-top:2rem;
+}
+
+
+.contact__content{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
 }
 .su__blank_space{
     width: 50vw;
@@ -16,20 +27,22 @@
 }
 .su__form_container{
     width: 50vw;
-    height: 90vh;
+    /* height: 90vh; */
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background-color: #1C3747;
+ 
 }
 
-.Contact{
+.contact__main_title{
 font-family: 'Playfair Display';
 font-weight: 700;
 font-size: 5rem;
-color: #262525;
+/* color: #262525; */
+color: #DDCBCB;
 }
 .contact_byline{
 font-family: 'Playfair Display';
@@ -59,16 +72,24 @@ color: #DDCBCB;
 
 .contact_body{
 justify-content: center !important;
-flex-direction: column;
+flex-direction: row;
 border: none;
 margin-left: 7rem;
+border: none;
+display: flex;
+gap: 2rem;
+flex-wrap: wrap;
+
 }
+
 
 .co_input{
 justify-content: center !important;    
 height: 3rem;
 width:16rem;
 border-radius: 10px;
+
+
   
 }
 
@@ -76,13 +97,17 @@ border-radius: 10px;
     width: 510px;
     height: 120px;
     border-radius: .5em;
+   
 }
 
 .submit_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color:#006360;
     color: #ffff;
     border-radius: 20px;
-    justify-content: center ;
+    
     border: none;
     width: 15rem;
     height: 3rem;

@@ -1,6 +1,7 @@
 .place__detail_page_container {
     display: flex;
     width: 100%;
+
     flex-direction: column;
     align-items: center;
 }
@@ -22,6 +23,52 @@
     border-radius: 1rem;
     color: white;
     display: flex;
+   justify-content: center;
+   align-items: center;
+    flex-direction: column;
+    background: linear-gradient(104.98deg, #2A4E64 2.26%, #0C1E27 93.54%), linear-gradient(104.98deg, #27315A 2.26%, #000000 93.54%);
+   
+    
+
+}
+
+.image_place{
+  background: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    width: 100%;
+    top: 0px;
+    background-position: center;
+}
+.place__detail_page_container h1{
+  position: absolute;
+  color: rgb(250, 248, 248);
+  font-size: 8rem;
+  font-family: 'antonio';
+  top: 30rem;
+  left: 5rem;
+  text-transform: capitalize;
+  
+
+   
+
+}
+.place__detail_page_container h2{
+  color: rgb(250, 248, 248);
+  font-size: 2rem;
+  font-family: antonio;
+  justify-content: center;
+  align-items: center;
+
+}
+.place__detail_image{
+  width: 10rem;
+  height: 10rem;   
+  margin-top: 0px; 
+}
+
+.place__detail_content{
+    /* display: flex; */
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -34,6 +81,10 @@
 
 .place__activites {
     margin-top: 1rem;
+
+    /* margin-top: 2rem; */
+    padding: 3rem;
+    color: antiquewhite;
 }
 
 .festivals__section {
@@ -138,6 +189,49 @@
 }
 
 @media all and (max-width: 500px) {
+
+  }
+  
+.guide__main_body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+  .guides__cards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+  
+   
+  }
+.guide_display_image{
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    background: none;
+  }
+  /* .guide__card_main{
+     background-color: #005b20;
+  } */
+
+  .guide__card_main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  @media all and (max-width: 500px) {
+
     .act__card-list {
         /* On small screens, we are no longer using row direction but column */
         flex-direction: column;
