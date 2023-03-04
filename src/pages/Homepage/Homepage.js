@@ -6,6 +6,7 @@ import MainLayout from "../../components/MainLayout/MainLayout";
 import { Button } from "react-bootstrap";
 import Stars from "../../components/Stars/Stars";
 import Aos from "aos";
+import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
 const Homepage = () => {
   useEffect(()=>{
     Aos.init({duration:700})
@@ -35,7 +36,9 @@ const Homepage = () => {
             </Button>
           </div>
         </div>
+       
       </div>
+      <PhotoGallery/>
       </Stars>
     </MainLayout>
   );
