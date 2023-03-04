@@ -69,6 +69,7 @@ const PlaceDetailPg = () => {
               fest.place_foreign === parseInt(place_id) ? (
                 <FestivalCard
                   key={index}
+                  festDesc={fest.festival_desc}
                   festImage={fest.festival_image}
                   festName={fest.festival_name}
                 />
