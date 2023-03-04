@@ -13,7 +13,12 @@
   }
 
   .items__card_container{
-    padding: 3rem;
+    padding: 7rem;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 3rem;
   }
   .button_container_item_card{
     display: flex;
