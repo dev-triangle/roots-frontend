@@ -65,14 +65,14 @@
     transition: all 0.2s linear;
 }
 
-@keyframes rotBGimg {
+/* @keyframes rotBGimg {
     from {
         transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
     }
-}
+} */
 
 .place__card::after {
     content: '';
