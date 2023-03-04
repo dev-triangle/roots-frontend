@@ -1,10 +1,22 @@
 import React from "react";
 import { Card } from "@mui/material";
+import { makeStyles } from '@mui/styles';
 import "./PlaceDetailPg.css";
+const useStyles = makeStyles({
+  card: {
+    backgroundColor: 'transparent', // set the background color to transparent
+    border: 'none',
+    color:"#ffff",
+  },
+});
+
 const GuideCard = ({ gender, name, desc, age, contact, addres }) => {
+  // useEffect(())
+  const guideCardClasses = useStyles();
   if (gender === "Male") {
     return (
-      <Card>
+      <div data-aos="zoom-in">
+      <Card className={guideCardClasses.card}>
         <div className="guide__card_main">
           <img className="guide_display_image"
             src="https://www.w3schools.com/howto/img_avatar.png"
@@ -21,6 +33,7 @@ const GuideCard = ({ gender, name, desc, age, contact, addres }) => {
           </p>
         </div>
       </Card>
+      </div>
     );
   } else {
     return (

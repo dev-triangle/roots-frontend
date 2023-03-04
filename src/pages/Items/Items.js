@@ -5,8 +5,11 @@ import ItemsCard from './ItemsCard'
 import axios from 'axios'
 import {baseUrl}from '../../utils/urls'
 import axiosInstance from '../../auth/authHandler'
-
+import Aos from 'aos'
 const Items = () => {
+  useEffect(()=>{
+    Aos.init({duration:700})
+  },[])
   const[itemElements,setItems]=useState([])
   const[userId,setUserId]=useState()
   useEffect(()=>{

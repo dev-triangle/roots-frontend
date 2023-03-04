@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MainLayout from "../../components/MainLayout/MainLayout";
 import "./Contact.css";
 import axios from "axios";
 import { baseUrl } from "../../utils/urls";
 import { toast } from "react-hot-toast";
+import Aos from "aos";
 const Contact = () => {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [email, setEmail] = useState("");
-
+  useEffect(()=>{
+    Aos.init({duration:700})
+  },[])
   const contactSubmit = (e) => {
     e.preventDefault();
     axios.post(`${baseUrl}/contacts/`,
@@ -31,7 +34,7 @@ const Contact = () => {
   };
   return (
     <MainLayout>
-      <div className="su__main">
+      <div className="su__main" data-aos="zoom-in">
 
 
       <p className="contact__main_title">Contact</p>
