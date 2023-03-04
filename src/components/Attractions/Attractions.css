@@ -1,39 +1,116 @@
-  .atrcations__cards_container{
+.atrcations__cards_container {
     display: flex;
     width: 100%;
     padding: 3rem;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
-  }
+    margin-top: 1rem;
+}
 
-  .attractions__section{
+.attractions__section {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .attraction__card_body{
+    margin-top: 3rem;
+}
+
+.attraction__card_body {
     display: flex;
-   width: 268px;
-    /* height: 240px; */
+    color: white;
     background-color: #ffff;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    border-radius: 30px;
-    padding: 2rem;
-  }
-  
-  .attraction__card_body img{
-    width: 270px;
-    height: 142px;
     border-radius: 20px;
-  }
-  .attract__card_btns{
+    padding: 1rem;
+    background: rgb(63, 61, 106);
+    background: rgb(67, 67, 85);
+    background: linear-gradient(90deg, rgba(67, 67, 85, 1) 2%, rgba(2, 5, 14, 1) 46%, rgba(34, 44, 45, 1) 59%);
+    box-shadow: 1px 2px 26px 4px #7c7c7c;
+}
+
+.attraction__card_body {
+    display: flex;
+    background-color: #ffff;
+    flex-direction: column;
+    align-items: center;
+}
+
+.attraction__card_body img {
+    width: 80%;
+    height: 8rem;
+    border-radius: 20px;
+    margin-top: -4rem;
+}
+
+.attract__card_btns {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
-  }
+}
+
+button {
+    background-color: transparent;
+    border: 2px solid #68d0e5;
+    border-radius: 0.2rem;
+    color: #b1c7ca;
+    font-weight: bold;
+    padding: 0.5rem;
+    position: relative;
+    text-transform: uppercase;
+    transition: ease-in 0.3s;
+}
+
+button:hover,
+button:active,
+button:focus {
+    background: radial-gradient(#909b9e, #4cc9f0);
+    box-shadow: 0px 0px 0.3rem #00b4d8;
+    color: #16191a;
+}
+
+button::before {
+    bottom: -0.5rem;
+    content: "";
+    left: 0;
+    position: absolute;
+}
+
+button::after {
+    top: -0.5rem;
+    content: "";
+    left: 0;
+    position: absolute;
+}
+
+button:hover::before {
+    animation: ease-in moveBar 0.6s forwards reverse;
+}
+
+button:hover::after {
+    animation: ease-in moveBar 0.6s forwards;
+}
+
+@keyframes moveBar {
+    0% {
+        width: 0;
+    }
+    1% {
+        border: 1px solid #00b4d8;
+    }
+    40% {
+        width: 2rem;
+    }
+    99% {
+        border: 1px solid #00b4d8;
+        left: 99%;
+    }
+    100% {
+        border: none;
+        left: 100%;
+        width: 0;
+    }
+}
