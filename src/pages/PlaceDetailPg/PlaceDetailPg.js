@@ -46,7 +46,7 @@ const PlaceDetailPg = () => {
         <div className="image_place"
         style={{ backgroundImage: `url(${place.place_image})` }}></div>
         <h1 className="place_name">{place.place_name}</h1>
-
+       
 
         <div className="place__activites">
           <h2>Destinations</h2>
@@ -69,6 +69,7 @@ const PlaceDetailPg = () => {
               fest.place_foreign === parseInt(place_id) ? (
                 <FestivalCard
                   key={index}
+                  festDesc={fest.festival_desc}
                   festImage={fest.festival_image}
                   festName={fest.festival_name}
                 />
