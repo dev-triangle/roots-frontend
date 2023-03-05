@@ -50,7 +50,7 @@ const PlaceDetailPg = () => {
 
         <div className="place__activites">
           <h2>Destinations</h2>
-
+          <div className="place__container">
           {activities.map((activity, index) =>
             activity.place_foreign === parseInt(place_id) ? (
               <ActivityCard
@@ -61,6 +61,8 @@ const PlaceDetailPg = () => {
             ) : null
           )}
         </div>
+        </div>
+        
 
         <div className="festivals__section">
           <h2>Festivals</h2>

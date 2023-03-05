@@ -78,11 +78,21 @@
 }
 
 .place__activites {
-    margin-top: 1rem;
-
+    margin-top: 6rem;
+    display: flex;
+  
+  flex-direction: column;
+  align-items: center;
     /* margin-top: 2rem; */
     padding: 3rem;
     color: antiquewhite;
+}
+.place__container{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 3rem;
 }
 .festivals__section{
   display: flex;
@@ -159,23 +169,51 @@
     color: black;
   }
   
-
+  .festival__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+.festival__cards_container {
+  display: flex;
+  width: 100%;
+  padding: 5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
   .festival__card_body{
     display: flex;
-    width: 13rem;
+    /* width: 13rem; */
     flex-direction: column;
-    gap: 2rem;
-    border-radius: 20px;
+    gap: 1rem;
+    border-radius: 10px;
     align-items: center;
     color: #ffff;
-    height: 15rem;
-    background-color: #002B5B;
+    height: 16rem;
+    background-color: rgba(254, 245, 245, 0.09);
+    box-shadow: 5px 5px 30px 7px rgb(0 0 0 / 25%), -5px -5px 30px 7px rgb(0 0 0 / 22%);
+    cursor: pointer;
+    transition: 0.4s;
+  
   }
 
+  .festival__card_body:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+  .festival__card_body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
   .festival__card_body img{
-    height: 150px;
+    height: 8rem;
     width: 100%;
-    border-radius: 10px;
+    margin-top: -3rem;
   }
 
   .festival__card_body p{
