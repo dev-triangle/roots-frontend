@@ -8,6 +8,7 @@ import ActivityCard from "./ActivityCard";
 import FestivalCard from "./FestivalCard";
 import GuidesSection from "./GuidesSection";
 import Attractions from "../../components/Attractions/Attractions";
+// import CustomTitle from "../../utils/CustomTitle";
 
 const PlaceDetailPg = () => {
   let { place_id } = useParams();
@@ -42,6 +43,7 @@ const PlaceDetailPg = () => {
   }, []);
   return (
     <MainLayout>
+      {/* <CustomTitle title={place.place_name}/> */}
       <div className="place__detail_page_container" >
         <div className="image_place"
         style={{ backgroundImage: `url(${place.place_image})` }}></div>

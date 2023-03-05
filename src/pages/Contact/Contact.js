@@ -5,6 +5,7 @@ import axios from "axios";
 import { baseUrl } from "../../utils/urls";
 import { toast } from "react-hot-toast";
 import Aos from "aos";
+import CustomTitle from "../../utils/CustomTitle";
 const Contact = () => {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -34,6 +35,7 @@ const Contact = () => {
   };
   return (
     <MainLayout>
+      <CustomTitle title="Contact" />
       <div className="su__main" data-aos="zoom-in">
 
 
