@@ -9,7 +9,9 @@
     padding-top:2rem;
 }
 
-
+.contact_heading{
+    color: #DDCBCB;
+}
 .contact__content{
     display: flex;
     width: 100%;
@@ -77,12 +79,12 @@ color: #DDCBCB;
 }
 .co_body{
 position: relative;
-
+}
 .contact_body{
 justify-content: center !important;
 flex-direction: column;
 border: none;
-margin-left: 7rem;
+
 }
 
 
@@ -102,21 +104,22 @@ border-radius: 10px;
     border-radius: .5em;
    
 }
-.submit_body{
-    position: relative;
-    top: 475px;
-    left: 1000px;  
-    
-}
+
 .submit_button{
     background-color:#006360;
     color: #ffff;
     border-radius: 20px;
+    cursor:pointer;
     
     border: none;
     width: 15rem;
     height: 3rem;
     box-shadow: 4px 4px 12px #05182D, inset 4px 4px 14px rgba(255, 255, 255, 0.25);
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem; 
     
 }
 .submit_button:hover{

@@ -57,7 +57,9 @@ const BecomeGuideForm = () => {
   };
   return (
     <form onSubmit={becomeGuide} className="form_guide" data-aos="fade-up">
-      <select required name="" id="" classNmae="form_container" value={placeId} onChange={selectDropDown}>
+      <label className="place">Place
+      <select required name="" id="" className="form_container" value={placeId} onChange={selectDropDown}>
+      
         {places.map((place, index) => {
           return (
             <option key={index} value={parseInt(place.id)}>
@@ -66,6 +68,7 @@ const BecomeGuideForm = () => {
           );
         })}
       </select>
+      </label>
       <input
         className="guide_input"
         required
@@ -116,8 +119,10 @@ const BecomeGuideForm = () => {
           setAge(e.target.value);
         }}
       />
-      <div>
-        <input
+      <div className="dots">
+
+        <div>
+                  <input
         className="guide_radio"
           required
           type="radio"
@@ -143,7 +148,7 @@ const BecomeGuideForm = () => {
             setGender(e.target.value);
           }}
         />
-        <label for="dewey">Female</label>
+        <label for="dewey">  Female</label>
       </div>
 
       <div>
@@ -158,7 +163,8 @@ const BecomeGuideForm = () => {
             setGender(e.target.value);
           }}
         />
-        <label for="louie">Other</label>
+        <label for="louie">  Other</label>
+      </div>
       </div>
       <button type="submit" className="g_button">submit</button>
     </form>
