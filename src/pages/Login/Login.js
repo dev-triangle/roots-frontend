@@ -4,6 +4,7 @@ import MainLayout from '../../components/MainLayout/MainLayout'
 import { baseUrl } from '../../utils/urls'
 import axiosInstance from '../../auth/authHandler'
 import { useNavigate } from 'react-router-dom'
+import CustomTitle from '../../utils/CustomTitle'
 const Login = () => {
   const navigate=useNavigate();
   const[email,setEmail]=useState("")
@@ -28,6 +29,7 @@ const Login = () => {
 }
   return (
     <MainLayout>
+      <CustomTitle title="Login"/>
       <div className='su__main'>
         <div className="su__blank_space">
         </div>
