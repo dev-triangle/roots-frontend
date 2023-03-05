@@ -222,6 +222,13 @@
     align-items: center;
     padding: 2rem;
 }
+.destination__cards_contain{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
 
 @media all and (max-width: 500px) {
     .act__card-list {
