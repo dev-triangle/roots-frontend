@@ -8,6 +8,7 @@ import ActivityCard from "./ActivityCard";
 import FestivalCard from "./FestivalCard";
 import GuidesSection from "./GuidesSection";
 import Attractions from "../../components/Attractions/Attractions";
+// import CustomTitle from "../../utils/CustomTitle";
 
 const PlaceDetailPg = () => {
   let { place_id } = useParams();
@@ -42,11 +43,12 @@ const PlaceDetailPg = () => {
   }, []);
   return (
     <MainLayout>
+      {/* <CustomTitle title={place.place_name}/> */}
       <div className="place__detail_page_container" >
         <div className="image_place"
         style={{ backgroundImage: `url(${place.place_image})` }}></div>
         <h1 className="place_name">{place.place_name}</h1>
-
+       
 
         <div className="place__activites">
           <h2>Destinations</h2>
@@ -69,6 +71,7 @@ const PlaceDetailPg = () => {
               fest.place_foreign === parseInt(place_id) ? (
                 <FestivalCard
                   key={index}
+                  festDesc={fest.festival_desc}
                   festImage={fest.festival_image}
                   festName={fest.festival_name}
                 />

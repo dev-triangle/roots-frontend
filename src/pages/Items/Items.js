@@ -6,6 +6,7 @@ import axios from 'axios'
 import {baseUrl}from '../../utils/urls'
 import axiosInstance from '../../auth/authHandler'
 import Aos from 'aos'
+import CustomTitle from '../../utils/CustomTitle'
 const Items = () => {
   useEffect(()=>{
     Aos.init({duration:700})
@@ -30,6 +31,7 @@ const Items = () => {
   return (
     <div>
         <MainLayout>
+          <CustomTitle title="Items"/>
         <div className="items__card_container">
            {itemElements.map((itemElement,index)=>{
             return(

@@ -37,7 +37,7 @@ const GuideCard = ({ gender, name, desc, age, contact, addres }) => {
     );
   } else {
     return (
-      <Card>
+      <Card className={guideCardClasses.card}>
         <div className="guide__card_main">
           <img className="guide_display_image"
             src="https://www.w3schools.com/howto/img_avatar2.png"

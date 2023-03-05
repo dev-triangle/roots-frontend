@@ -6,6 +6,8 @@ import MainLayout from "../../components/MainLayout/MainLayout";
 import { Button } from "react-bootstrap";
 import Stars from "../../components/Stars/Stars";
 import Aos from "aos";
+import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
+import CustomTitle from "../../utils/CustomTitle";
 const Homepage = () => {
   useEffect(()=>{
     Aos.init({duration:700})
@@ -13,6 +15,7 @@ const Homepage = () => {
   const navigate = useNavigate();
   return (
     <MainLayout>
+      <CustomTitle title="Home" />
        <Stars>
       <div className="home__container">
         <div className="home__innercontainer">
@@ -35,7 +38,9 @@ const Homepage = () => {
             </Button>
           </div>
         </div>
+       
       </div>
+      <PhotoGallery/>
       </Stars>
     </MainLayout>
   );
