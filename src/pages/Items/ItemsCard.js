@@ -3,7 +3,12 @@ import ItemsDetDialog from '../../components/ItemsDetDialog/ItemsDetDialog'
 import { baseUrl } from '../../utils/urls';
 import axiosInstance from '../../auth/authHandler';
 import { toast } from 'react-hot-toast';
+import Aos from 'aos';
+import { useEffect } from 'react';
 const ItemsCard = ({itemName,itemImage,itemDesc,itemId,userId}) => {
+  useEffect(()=>{
+    Aos.init({duration:700})
+  },[])
   const[pName,setPName]=useState('');
   const[open,setOpen]=useState(false);
   const handleClose=()=>{
@@ -18,7 +23,7 @@ const ItemsCard = ({itemName,itemImage,itemDesc,itemId,userId}) => {
         item_foreign_key: itemId,
         user_foreign: userId
     }).then((response)=>{
-      console.log("purchase: ",response)
+      // console.log("purchase: ",response)
       if(response.status===201){
         toast.success("Succesfully placed the order!!");
       }
@@ -26,7 +31,7 @@ const ItemsCard = ({itemName,itemImage,itemDesc,itemId,userId}) => {
     
   }
   return (
-    <div className='item__card__body'>
+    <div className='item__card__body' data-aos="zoom-in">
       <ItemsDetDialog open={open} handleClose={handleClose} pName={pName} itemDesc={itemDesc}/>
       <img className='item__card_img' src={itemImage} alt="item__image" />
       <p>{itemName}</p>

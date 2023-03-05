@@ -2,8 +2,19 @@
     width: 100vw;
     min-height: 90vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     font-family: Poppins;
+    align-items: center;
+    padding-top:2rem;
+}
+
+
+.contact__content{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
 }
 .su__blank_space{
     width: 50vw;
@@ -16,20 +27,22 @@
 }
 .su__form_container{
     width: 50vw;
-    height: 90vh;
+    /* height: 90vh; */
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background-color: #1C3747;
+ 
 }
 
-.Contact{
+.contact__main_title{
 font-family: 'Playfair Display';
 font-weight: 700;
 font-size: 5rem;
-color: #262525;
+/* color: #262525; */
+color: #DDCBCB;
 }
 .contact_byline{
 font-family: 'Playfair Display';
@@ -65,49 +78,20 @@ color: #DDCBCB;
 .co_body{
 position: relative;
 
-}
-.contact_input{
-position: relative;
-width: 200px;
-height: 396px;
-left: 850px;
-top: 230px;
+.contact_body{
+justify-content: center !important;
+flex-direction: column;
 border: none;
+margin-left: 7rem;
 }
 
-.co_input4{
- position: relative;
-width: 250px;
-height: 30px;
-left: 270px;
-top: 50px;
-border-radius: .5em;
-padding: 12px 20px;
-}
-.co_input2{
-    position:relative;
-    width: 250px;
-    height: 30px;
-    left: 10px;
-    top:50px;
-    border-radius: .5em;
-}
-.co_input3{
-    position:relative;
-    width: 250px;
-    height: 30px;
-    left: 270px;
-    top:0px;
-    border-radius: .5em;
-}
-.co_input1{
-    position:relative;
-    width: 250px;
-    height: 30px;
-    left: 10px;
-    top:0px;
-    border-radius: .5em;
 
+.co_input{
+justify-content: center !important;    
+height: 3rem;
+width:16rem;
+border-radius: 10px;
+  
 }
 
 .co_inputm{
@@ -116,6 +100,7 @@ padding: 12px 20px;
     left: 10px;
     top:100px;
     border-radius: .5em;
+   
 }
 .submit_body{
     position: relative;
@@ -124,10 +109,10 @@ padding: 12px 20px;
     
 }
 .submit_button{
-    background-color: #0062CC;
+    background-color:#006360;
     color: #ffff;
     border-radius: 20px;
-    justify-content: center ;
+    
     border: none;
     width: 15rem;
     height: 3rem;
