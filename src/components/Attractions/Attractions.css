@@ -6,6 +6,8 @@
     flex-wrap: wrap;
     gap: 2rem;
     margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .attractions__section {

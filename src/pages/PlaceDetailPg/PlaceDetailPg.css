@@ -222,7 +222,8 @@
     align-items: center;
     padding: 2rem;
 }
-.destination__cards_contain{
+
+.destination__cards_contain {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -234,5 +235,66 @@
     .act__card-list {
         /* On small screens, we are no longer using row direction but column */
         flex-direction: column;
+    }
+}
+
+@media (min-width:800px) and (max-width:1200px) {
+    .place__detail_page_container h1 {
+        font-size: 3rem;
+        top: 18rem
+    }
+    .image_place {
+        height: 15rem;
+    }
+    .festivals__container {
+        padding: 1rem;
+    }
+    .festival__card_body {
+        width: 40%;
+        padding: 1rem;
+    }
+    button {
+        font-size: .5rem;
+    }
+}
+
+@media (min-width:500px) and (max-width:800px) {
+    .place__detail_page_container h1 {
+        font-size: 2rem;
+        top: 16rem
+    }
+    .image_place {
+        height: 12rem;
+    }
+    .place__activites {
+        margin: 0rem;
+    }
+    .festival__card_body>p {
+        font-size: .5rem;
+    }
+    button {
+        font-size: .5rem;
+    }
+    .festival__card_body {
+        width: 80%;
+    }
+}
+
+@media (min-width:200px) and (max-width:500px) {
+    .place__detail_page_container h1 {
+        font-size: 1.2rem;
+        top: 14.5rem;
+    }
+    .image_place {
+        height: 10rem;
+    }
+    .festival__card_body {
+        width: 100%;
+    }
+    button {
+        font-size: .5rem;
+    }
+    .festivals__container {
+        padding: 1rem;
     }
 }
