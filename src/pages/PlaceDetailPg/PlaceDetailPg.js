@@ -6,8 +6,9 @@ import { baseUrl } from "../../utils/urls";
 import "./PlaceDetailPg.css";
 import ActivityCard from "./ActivityCard";
 import FestivalCard from "./FestivalCard";
-
+import GuidesSection from "./GuidesSection";
 import Attractions from "../../components/Attractions/Attractions";
+// import CustomTitle from "../../utils/CustomTitle";
 
 const PlaceDetailPg = () => {
   let { place_id } = useParams();
@@ -29,33 +30,29 @@ const PlaceDetailPg = () => {
         setPlace(response.data);
       },
       (error) => {
-        console.log(error);
+        // console.log(error);
       }
     );
   }, [place_id]);
 
   useEffect(() => {
     axios.get(`${baseUrl}/activities/`).then((res) => {
-      console.log(res);
+      // console.log(res);
       setActivities(res.data);
     });
   }, []);
   return (
     <MainLayout>
-      <div className="place__detail_page_container">
-        <h1>{place.place_name}</h1>
-        <div className="place__detail_content">
-          <img
-            className="place__image"
-            src={place.place_image}
-            alt="place_image"
-          />
-          <p>{place.place_description}</p>
-        </div>
+      {/* <CustomTitle title={place.place_name}/> */}
+      <div className="place__detail_page_container" >
+        <div className="image_place"
+        style={{ backgroundImage: `url(${place.place_image})` }}></div>
+        <h1 className="place_name">{place.place_name}</h1>
+       
 
         <div className="place__activites">
-          <h1>Activities</h1>
-
+          <h2>Destinations</h2>
+          <div className="destination__cards_contain">
           {activities.map((activity, index) =>
             activity.place_foreign === parseInt(place_id) ? (
               <ActivityCard
@@ -65,15 +62,17 @@ const PlaceDetailPg = () => {
               />
             ) : null
           )}
+          </div>
         </div>
 
         <div className="festivals__section">
-          <h1>Festivals</h1>
+          <h2>Festivals</h2>
           <div className="festivals__container">
             {festivals.map((fest, index) =>
               fest.place_foreign === parseInt(place_id) ? (
                 <FestivalCard
                   key={index}
+                  festDesc={fest.festival_desc}
                   festImage={fest.festival_image}
                   festName={fest.festival_name}
                 />
@@ -83,6 +82,8 @@ const PlaceDetailPg = () => {
         </div>
 
         <Attractions/>
+        <GuidesSection placeId={place_id}/>
+
       </div>
     </MainLayout>
   );

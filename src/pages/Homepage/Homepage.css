@@ -1,60 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Rock+Salt&display=swap');
-
-.home_container{
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Rock+Salt&display=swap");
+.home__container {
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     background-color: #462727;
-    background-size: cover; 
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url('../../assets/png/Bgroot.png');
 }
-      
 
-.home_title{
-    font-size: 128px;
+.home__innercontainer {
+    width: 100%;
+}
+
+.home__content {
+    width: 80%;
+    margin: auto;
+}
+
+.home__content>div {
+    margin: 1.2rem;
+}
+
+.home__title {
+    font-size: 8rem;
     margin-left: 1.2em;
     color: #ffffff;
 }
 
-.home_intro{ 
-    font-family:'Work Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 23px;
-    line-height: 27px;
-    width: 732px;
-    height: 85px;
-    color: #ffffff;
-    margin-left: 150px;
+.home__intro {
+    font-family: "Work Sans";
+    color: rgb(163, 158, 158);
+    font-size: 2.2rem;
 }
-/* .home_button{
-    border: none;
-    background: #c4b31b;    
-    border-radius: 71px;
-    color: #10293a;
-    height: 2.25rem;
-    width: 6.5rem;
-    padding: .5rem;
-    left: 309px;
-    display: flex;
-    flex-direction: column;
-    
-} */
 
-.home_button  {
+.home__button {
+    width: 10rem;
     border: none;
-    background:  #006DD1;
-    border-radius: 12px;
+    background: #006dd1;
+    cursor: pointer;
+    border-radius: 1rem;
     color: #bcd3e2;
-    height: 45px;
-    width: 130px;
-    padding:0.75rem;
+    padding: 0.95rem;
     font-display: center;
-    font-weight: bold;
-    margin-left: 150px;
+    font-size: 1.2rem;
+    box-shadow: 4px 4px 12px #05182D, inset 4px 4px 14px rgba(255, 255, 255, 0.25);
 }
+.home__button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 .Font {
-    font-family: 'Rock Salt', cursive ;
+    font-family: "Rock Salt", cursive;
+}
+
+@media(min-device-width: 200px) and (max-device-width: 800px) {
+    .home__title {
+        font-size: 5rem;
+    }
+    .home__content>div {
+        margin: 1rem;
+    }
+    .home__intro {
+        font-size: 1.2rem;
+    }
+    .home__button {
+        width: 8rem;
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-device-width: 250px) {
+    body {
+        display: none;
+    }
 }

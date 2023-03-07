@@ -54,6 +54,9 @@ function Navbar() {
           <PageLink to="/contact" className="nav__link">
             CONTACT
           </PageLink>
+          <NavLink to="/guide-reg" className="nav__link">
+            GUIDE
+          </NavLink>
           {window.localStorage.getItem("access_token") ? (
             <PageLink to="/profile" className="nav__link">
               MY PROFILE
@@ -148,6 +151,17 @@ function Navbar() {
               className="navmob__link"
             >
               Items
+            </NavLink>
+            <NavLink
+              data-aos="fade-right"
+              data-aos-duration="400"
+              to="/guide-reg"
+              onClick={() => {
+                handleDrawerClose();
+              }}
+              className="navmob__link"
+            >
+              Become Guide
             </NavLink>
             <PageLink
               data-aos="fade-right"

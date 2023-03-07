@@ -4,6 +4,7 @@ import MainLayout from '../../components/MainLayout/MainLayout'
 import axios from 'axios'
 import { baseUrl } from '../../utils/urls'
 import { useNavigate } from 'react-router-dom'
+import CustomTitle from '../../utils/CustomTitle'
 const Signup = () => {
   const[username,setUsername]=useState('');
   const[email,setEmail]=useState('')
@@ -16,16 +17,17 @@ const Signup = () => {
       password:password,
       email:email
     }).then(response=>{
-      console.log(response)
+      // console.log(response)
       if(response.status===201){
         navigate('/login')
       }
     },error=>{
-      console.log(error)
+      // console.log(error)
     })
   }
   return (
     <MainLayout>
+      <CustomTitle title="Signup"/>
       <div className='su__main'>
         <div className="su__blank_space">
 

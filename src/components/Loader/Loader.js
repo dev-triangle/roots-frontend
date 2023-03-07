@@ -2,8 +2,13 @@ import React from "react";
 import "./Loader.css";
 const Loader = () => {
   return (
-    <div className="loader__container">
-      <div className="loader"></div>
+    <div id="loader-wrapper">
+      <div id="loader5" className="loaderbox">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   );
 };
