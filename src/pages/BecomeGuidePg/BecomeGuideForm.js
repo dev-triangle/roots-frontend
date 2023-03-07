@@ -15,9 +15,9 @@ const BecomeGuideForm = () => {
   const [places, setPlaces] = useState([]);
   const [placeId, setPlaceId] = useState();
   const navigate = useNavigate();
-  useEffect(()=>{
-    Aos.init({duration:700})
-  },[])
+  useEffect(() => {
+    Aos.init({ duration: 700 });
+  }, []);
   useEffect(() => {
     axios.get(`${baseUrl}/places/`).then((res) => {
       // console.log(res.data);
@@ -57,7 +57,14 @@ const BecomeGuideForm = () => {
   };
   return (
     <form onSubmit={becomeGuide} className="form_guide" data-aos="fade-up">
-      <select required name="" id="" classNmae="form_container" value={placeId} onChange={selectDropDown}>
+      <select
+        required
+        name=""
+        id=""
+        classNmae="form_container"
+        value={placeId}
+        onChange={selectDropDown}
+      >
         {places.map((place, index) => {
           return (
             <option key={index} value={parseInt(place.id)}>
@@ -107,7 +114,7 @@ const BecomeGuideForm = () => {
         }}
       />
       <input
-      className="guide_input"
+        className="guide_input"
         required
         type="number"
         placeholder="age"
@@ -116,24 +123,24 @@ const BecomeGuideForm = () => {
           setAge(e.target.value);
         }}
       />
-      <div>
+      <div className="form__radio">
+        <div className="form__radio__item">
+          <input
+            className="guide_radio"
+            required
+            type="radio"
+            id="male_radio"
+            name="gender"
+            value="Male"
+            onChange={(e) => {
+              setGender(e.target.value);
+            }}
+          />
+          <label for="huey">Male</label>
+        </div>
+        <div className="form__radio__item">
         <input
-        className="guide_radio"
-          required
-          type="radio"
-          id="male_radio"
-          name="gender"
-          value="Male"
-          onChange={(e) => {
-            setGender(e.target.value);
-          }}
-        />
-        <label for="huey">Male</label>
-      </div>
-
-      <div>
-        <input
-        className="guide_radio"
+          className="guide_radio"
           required
           type="radio"
           id="female_radio"
@@ -143,12 +150,11 @@ const BecomeGuideForm = () => {
             setGender(e.target.value);
           }}
         />
-        <label for="dewey">Female</label>
-      </div>
-
-      <div>
+        <label for="dewey">Female</label>{" "}
+        </div>
+        <div className="form__radio__item">
         <input
-        className="guide_radio"
+          className="guide_radio"
           required
           type="radio"
           id="others_radio"
@@ -159,8 +165,11 @@ const BecomeGuideForm = () => {
           }}
         />
         <label for="louie">Other</label>
+        </div>
       </div>
-      <button type="submit" className="g_button">submit</button>
+      <button type="submit" className="g_button">
+        submit
+      </button>
     </form>
   );
 };
