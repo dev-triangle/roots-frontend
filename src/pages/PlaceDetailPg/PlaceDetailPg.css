@@ -223,7 +223,17 @@
     align-items: center;
     padding: 2rem;
 }
-
+.festival__btn{
+    border-color: #40edf7;
+    background-color: #002B5B;
+    color: white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: var(--primary-font);
+    cursor: pointer;
+    transition: 0.4s;
+}
 .destination__cards_contain {
     display: flex;
     flex-direction: row;

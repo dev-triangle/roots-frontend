@@ -11,7 +11,7 @@ const FestivalCard = ({festImage,festName,festDesc}) => {
       <FestivalsDialog festDesc={festDesc} open={open} setOpen={setOpen} handleClose={handleClose}/>
         <img className='festival__card_img' src={festImage} alt="afestival_image" />
         <p>{festName}</p>
-        <button onClick={()=>{
+        <button className='festival__btn' onClick={()=>{
           setOpen(true)
         }}>More Details</button>
 
