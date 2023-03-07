@@ -6,6 +6,8 @@
     flex-wrap: wrap;
     gap: 2rem;
     margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .attractions__section {
@@ -37,6 +39,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1rem;
 }
 
 .attraction__card_body :hover {
@@ -60,7 +63,7 @@
     gap: 1rem;
 }
 
-button {
+.att__c_btn {
     background-color: transparent;
     border: 2px solid #009490;
     border-radius: 0.2rem;
@@ -72,33 +75,33 @@ button {
     transition: ease-in 0.3s;
 }
 
-button:hover,
-button:active,
-button:focus {
-    background: radial-gradient(#909b9e, #009490);
-    box-shadow: 0px 0px 0.3rem #009490;
+.att__c_btn:hover,
+.att__c_btn:active,
+.att__c_btn:focus {
+    background: radial-gradient(#909b9e, #4cc9f0);
+    box-shadow: 0px 0px 0.3rem #00b4d8;
     color: #16191a;
 }
 
-button::before {
+.att__c_btn::before {
     bottom: -0.5rem;
     content: "";
     left: 0;
     position: absolute;
 }
 
-button::after {
+.att__c_btn::after {
     top: -0.5rem;
     content: "";
     left: 0;
     position: absolute;
 }
 
-button:hover::before {
+.att__c_btn:hover::before {
     animation: ease-in moveBar 0.6s forwards reverse;
 }
 
-button:hover::after {
+.att__c_btn:hover::after {
     animation: ease-in moveBar 0.6s forwards;
 }
 

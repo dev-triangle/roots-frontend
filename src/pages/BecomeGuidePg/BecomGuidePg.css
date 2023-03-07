@@ -1,100 +1,108 @@
-
-.form__part__guide{
+.form__part__guide {
     color: white;
-    /* display: flex;
-    padding-top: 5rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
 }
-.form__part__guide h1{
+
+.form_guide {
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+
+.form_guide>select,
+.form_guide>input {
+    width: 80%;
+    width: 20rem;
+    height: 3rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+}
+
+.form__part__guide h1 {
     justify-content: center;
-    display:flex ;
+    display: flex;
     color: #DDCBCB;
     font-size: 3rem;
     font-family: 'Playfair Display';
-
 }
-.form_guide{
 
+.form_guide {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
-   
-    
 }
 
-.guide_input{
+.guide_input {
     width: 20rem;
     height: 3rem;
-    border-radius: 10px;
-
+    border-radius: 1rem;
 }
-.guide_radio{
+
+.form__radio {
+    display: flex;
+    width: 30%;
+    margin: auto;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+.form__radio__item>label {
+    margin-left: .2rem;
+}
+
+.form__radio__item {
+    display: flex;
+}
+
+.guide_radio {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
 }
-.g_button{
-    background-color:#006360;
+
+.g_button {
+    background-color: #006360;
     color: #ffff;
     border-radius: 20px;
-    justify-content: center !important ;
+    justify-content: center !important;
     border: none;
     width: 15rem;
     height: 3rem;
     box-shadow: 4px 4px 12px #05182D, inset 4px 4px 14px rgba(255, 255, 255, 0.25);
-}  
-@media only screen and (max-width: 1300px) {
-
-}
-@media (min-device-width: 20px) and (max-device-width: 500px){
-   
-}
-@media only screen and (max-width: 1200px) {
-
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1300px) {}
 
-}
+@media (min-device-width: 20px) and (max-device-width: 500px) {}
 
-@media screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {}
 
-}
+@media only screen and (max-width: 1100px) {}
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 992px) {}
 
-}
+@media screen and (max-width: 800px) {}
 
 @media screen and (max-width: 600px) {
-    .g_rightside{
+    .g_rightside {
         width: 100vw;
     }
-    .guide_img{
+    .guide_img {
         visibility: hidden;
     }
-    .guide_main{
+    .guide_main {
         flex-direction: column-reverse;
         height: 90vh;
     }
-
 }
 
-@media screen and (max-width: 400px) {
-    
-}
-  
-@media only screen and (min-device-width: 320px) and (max-device-width: 
-  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+@media screen and (max-width: 400px) {}
 
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {}
 
-
-@media only screen and (device-width: 768px) {
-
-}
+@media only screen and (device-width: 768px) {}

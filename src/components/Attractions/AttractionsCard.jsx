@@ -48,10 +48,10 @@ const AttractionsCard = ({
       <p>{attractName}</p>
       <p>Ph: {attractPhno}</p>
       <div className="attract__card_btns">
-        <button onClick={()=>{
+        <button className="att__c_btn"onClick={()=>{
           setOpen(true)
         }}>Book Now</button>
-        <button >View Details</button>
+        <button className="att__c_btn">View Details</button>
       </div>
     </div>
   );

@@ -52,7 +52,7 @@ const PlaceDetailPg = () => {
 
         <div className="place__activites">
           <h2>Destinations</h2>
-          <div className="place__container">
+          <div className="destination__cards_contain">
           {activities.map((activity, index) =>
             activity.place_foreign === parseInt(place_id) ? (
               <ActivityCard
@@ -62,6 +62,7 @@ const PlaceDetailPg = () => {
               />
             ) : null
           )}
+          </div>
         </div>
         </div>
         
@@ -85,7 +86,7 @@ const PlaceDetailPg = () => {
         <Attractions/>
         <GuidesSection placeId={place_id}/>
 
-      </div>
+      
     </MainLayout>
   );
 };
