@@ -1,8 +1,10 @@
 import React from 'react'
 import { Dialog } from '@mui/material'
+
 const FestivalsDialog = ({open,setOpen,handleClose,festDesc}) => {
   return (
-    <Dialog
+    <Dialog 
+        
         fullWidth={true}
         maxWidth={"md"}
         PaperProps={{
@@ -13,7 +15,7 @@ const FestivalsDialog = ({open,setOpen,handleClose,festDesc}) => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <p>{festDesc}</p>
+        <p className='fest_desc'>{festDesc}</p>
     </Dialog>
   )
 }

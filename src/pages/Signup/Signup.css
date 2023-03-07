@@ -35,6 +35,7 @@
 .su__input_taker{
     height: 3rem;
     width:15rem;
+    border: none;
     border-radius: 10px;
 }
 .su__submit_button{

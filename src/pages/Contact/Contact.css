@@ -89,6 +89,7 @@
 .co_input {
     height: 3rem;
     width: 49%;
+    border: none;
     border-radius: .5rem;
     margin: 0.1rem;
 }
@@ -96,6 +97,7 @@
 .co_inputm {
     width: 98%;
     height: 5rem;
+    border: none;
     border-radius: 0.5rem;
     margin: 0.2rem;
 }
@@ -121,6 +123,7 @@
 @media (max-width:700px) {
     .contact_body>form {
         display: flex;
+        gap: 2rem;
         flex-direction: column;
         width: 80%;
     }

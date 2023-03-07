@@ -8,6 +8,7 @@ import ActivityCard from "./ActivityCard";
 import FestivalCard from "./FestivalCard";
 import GuidesSection from "./GuidesSection";
 import Attractions from "../../components/Attractions/Attractions";
+import Aos from "aos";
 // import CustomTitle from "../../utils/CustomTitle";
 
 const PlaceDetailPg = () => {
@@ -16,6 +17,9 @@ const PlaceDetailPg = () => {
   const [activities, setActivities] = useState([]);
   const [festivals, setFestivals] = useState([]);
 
+  useEffect(()=>{
+    Aos.init({duration:1000});
+  },[])
   useEffect(() => {
     axios.get(`${baseUrl}/festivals/`).then(
       (response) => {
@@ -47,12 +51,12 @@ const PlaceDetailPg = () => {
       <div className="place__detail_page_container" >
         <div className="image_place"
         style={{ backgroundImage: `url(${place.place_image})` }}></div>
-        <h1 className="place_name">{place.place_name}</h1>
+        <h1 className="place_name" data-aos="zoom-in" aos-delay="200">{place?.place_name}</h1>
        
 
         <div className="place__activites">
           <h2>Destinations</h2>
-          <div className="destination__cards_contain">
+          <div className="destination__cards_contain" data-aos="zoom-in">
           {activities.map((activity, index) =>
             activity.place_foreign === parseInt(place_id) ? (
               <ActivityCard
@@ -67,7 +71,7 @@ const PlaceDetailPg = () => {
         </div>
         
 
-        <div className="festivals__section">
+        <div className="festivals__section"  data-aos="fade-left">
           <h2>Festivals</h2>
           <div className="festivals__container">
             {festivals.map((fest, index) =>

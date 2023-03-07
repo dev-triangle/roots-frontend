@@ -7,7 +7,7 @@ const AttractBookDial = ({open,handleClose,finalSubmit}) => {
         fullWidth={true}
         maxWidth={"md"}
         PaperProps={{
-          sx: { width: "100%", borderRadius: 5, m: 2, minHeight: "60vh" },
+          sx: { width: "50%", borderRadius: 5, m: 2, minHeight: "20vh" },
         }}
         open={open}
         onClose={handleClose}
@@ -16,7 +16,7 @@ const AttractBookDial = ({open,handleClose,finalSubmit}) => {
       >
         <div className="dialog__book_confirm">
             <p>Are u sure u wanna book????</p>
-            <div className="dialog__book_confirm btns">
+            <div className="dialog__book_confirm_btns">
                 <button onClick={()=>{finalSubmit()
                 handleClose();
                 }}>Yes</button>

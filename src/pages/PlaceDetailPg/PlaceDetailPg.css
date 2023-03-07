@@ -169,16 +169,15 @@ h2{
 }
 
 .festival__card_body {
-  display: flex;
-  width: 13rem;
-  flex-direction: column;
-  gap: 2rem;
-  border-radius: 20px;
-  align-items: center;
-  color: #ffff;
-  height: 20rem;
-  justify-content: center;
-  background-color: #002B5B;
+    display: flex;
+    width: 13rem;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 20px;
+    align-items: center;
+    color: #ffff;
+    height: 15rem;
+    background-color: #002B5B;
 }
 
 .festival__card_body img {
@@ -232,17 +231,7 @@ h2{
   align-items: center;
   padding: 2rem;
 }
-.festival__btn{
-  border-color: #40edf7;
-  background-color: #002B5B;
-  color: white;
-  border-radius: 10px;
-  padding: 0.5rem;
-  font-size: 1rem;
-  font-family: var(--primary-font);
-  cursor: pointer;
-  transition: 0.4s;
-}
+
 .destination__cards_contain {
   display: flex;
   flex-direction: row;
@@ -251,28 +240,6 @@ h2{
   justify-content: center;
 }
 
-.bg_buttons{
-
-  background-color: transparent;
-  border: 2px solid #68d0e5;
-  border-radius: 0.2rem;
-  color: #b1c7ca;
-  font-weight: bold;
-  padding: 0.5rem;
-  position: relative;
-  text-transform: uppercase;
-  transition: ease-in 0.3s;
-}
-.bg_buttons:hover
-{
-  background: radial-gradient(#909b9e, #4cc9f0);
-  box-shadow: 0px 0px 0.3rem #00b4d8;
-  color: #16191a;
-}   
-
-.fest_desc{
-  padding: 3rem;
-}
 @media all and (max-width: 500px) {
   .act__card-list {
       /* On small screens, we are no longer using row direction but column */

@@ -3,6 +3,7 @@ import "./Attractions.css";
 import axiosInstance from "../../auth/authHandler";
 import { baseUrl } from "../../utils/urls";
 import AttractBookDial from "../AttractBookDial/AttractBookDial";
+import AttractVDDialog from "../AttractVDDialog/AttractVDDialog";
 const AttractionsCard = ({
   attractImage,
   attractName,
@@ -12,6 +13,10 @@ const AttractionsCard = ({
   placeId,
 }) => {
   const[open,setOpen]=useState(false)
+  const[openDet,setOpenDet]=useState(false)
+  const handleCloseDet=()=>{
+    setOpenDet(false);
+  }
   const [userId, setUserId] = useState();
   const handleClose=()=>{
     setOpen(false);
@@ -43,6 +48,7 @@ const AttractionsCard = ({
   };
   return (
     <div className="attraction__card_body">
+      <AttractVDDialog openDet={openDet} handleCloseDet={handleCloseDet} attractDesc={attractDesc}/>
       <AttractBookDial open={open} handleClose={handleClose} finalSubmit={finalSubmit}/>
       <img src={attractImage} alt=" " />
       <p>{attractName}</p>
@@ -51,7 +57,9 @@ const AttractionsCard = ({
         <button className="att__c_btn"onClick={()=>{
           setOpen(true)
         }}>Book Now</button>
-        <button className="att__c_btn">View Details</button>
+        <button onClick={()=>{
+          setOpenDet(true);
+        }} className="att__c_btn">View Details</button>
       </div>
     </div>
   );
