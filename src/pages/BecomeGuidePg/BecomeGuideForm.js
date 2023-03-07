@@ -82,9 +82,9 @@ const BecomeGuideForm = () => {
         onChange={(e) => {
           setName(e.target.value);
         }}
-      />
-      <input
-        className="guide_input"
+        />
+       <input
+        className="guide_input" 
         required
         type="text"
         placeholder="Description"

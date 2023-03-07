@@ -242,6 +242,28 @@
     justify-content: center;
 }
 
+.bg_buttons{
+
+    background-color: transparent;
+    border: 2px solid #68d0e5;
+    border-radius: 0.2rem;
+    color: #b1c7ca;
+    font-weight: bold;
+    padding: 0.5rem;
+    position: relative;
+    text-transform: uppercase;
+    transition: ease-in 0.3s;
+}
+.bg_buttons:hover
+ {
+    background: radial-gradient(#909b9e, #4cc9f0);
+    box-shadow: 0px 0px 0.3rem #00b4d8;
+    color: #16191a;
+ }   
+
+ .fest_desc{
+    padding: 3rem;
+ }
 @media all and (max-width: 500px) {
     .act__card-list {
         /* On small screens, we are no longer using row direction but column */

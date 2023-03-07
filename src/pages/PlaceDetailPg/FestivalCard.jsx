@@ -8,10 +8,10 @@ const FestivalCard = ({festImage,festName,festDesc}) => {
   }
   return (
     <div className='festival__card_body'>
-      <FestivalsDialog festDesc={festDesc} open={open} setOpen={setOpen} handleClose={handleClose}/>
+      <FestivalsDialog  festDesc={festDesc} open={open} setOpen={setOpen} handleClose={handleClose}/>
         <img className='festival__card_img' src={festImage} alt="afestival_image" />
         <p>{festName}</p>
-        <button className='festival__btn' onClick={()=>{
+        <button  className="bg_buttons" onClick={()=>{
           setOpen(true)
         }}>More Details</button>
 
