@@ -1,0 +1,17 @@
+.dialog__book_confirm{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.dialog__book_confirm_btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
