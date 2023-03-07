@@ -167,7 +167,8 @@
     border-radius: 20px;
     align-items: center;
     color: #ffff;
-    height: 15rem;
+    height: 20rem;
+    justify-content: center;
     background-color: #002B5B;
 }
 
