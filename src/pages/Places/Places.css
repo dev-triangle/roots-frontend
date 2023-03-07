@@ -9,9 +9,11 @@
 
 .places__cards_container {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     width: 100%;
     padding: 3rem;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
