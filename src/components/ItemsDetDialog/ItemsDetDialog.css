@@ -1,0 +1,11 @@
+.item_desc{
+    align-items: center;
+    padding: center;
+    font-size: 1.5rem;
+}
+.item_head{
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

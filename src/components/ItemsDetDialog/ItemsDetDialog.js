@@ -1,5 +1,6 @@
 import React from 'react'
 import { Dialog } from '@mui/material'
+import './ItemsDetDialog.css'
 const ItemsDetDialog = ({open,handleClose,pName,itemDesc}) => {
   return (
     <div>
@@ -14,8 +15,8 @@ const ItemsDetDialog = ({open,handleClose,pName,itemDesc}) => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <h1>{pName}</h1>
-        <p>{itemDesc}</p>
+        <h1 className='item_head'>{pName}</h1>
+        <p className='item_desc'>{itemDesc}</p>
 
         </Dialog>
     </div>
