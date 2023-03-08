@@ -13,15 +13,13 @@
   }
 
   .items__card_container{
-
-    padding: 7rem;
+    display: flex;
     flex-direction: row;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: auto;
-    grid-gap: 3rem;
-    
-   
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
   }
   .item__card_img:hover {
     transform: scale(1.2, 1.2);
