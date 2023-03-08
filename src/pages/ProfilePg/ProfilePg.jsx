@@ -23,23 +23,7 @@ const ProfilePg = () => {
         <p>Name: {user.username}</p>
         <p>Email: {user.email}</p>
       </div>
-    
-    <div className='registered__card'>
-     
-      <div className='reg__cardbody'>
-        <h4>HEADING</h4>
-        <p>description</p>
-      </div>
-      <div className='reg__cardbody'>
-        <h4>HEADING</h4>
-        <p>description</p>
-      </div>
-      <div className='reg__cardbody'>
-        <h4>HEADING</h4>
-        <p>description</p>
-      </div>
 
-    </div>
       <BookedData/>
       <PurchaseData/>
     </MainLayout>

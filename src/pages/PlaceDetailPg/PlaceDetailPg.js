@@ -86,6 +86,7 @@ const PlaceDetailPg = () => {
             )}
           </div>
         </div>
+        
 
         <Attractions/>
         <GuidesSection placeId={place_id}/>
