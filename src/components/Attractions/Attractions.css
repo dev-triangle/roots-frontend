@@ -9,7 +9,14 @@
     justify-content: center;
     align-items: center;
 }
-
+.attract__header_main{
+    text-transform: capitalize;
+    font-size: 4rem;
+    font-weight: 600;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(180deg,#fff,#40edf7);
+    -webkit-background-clip: text;
+}
 .attractions__section {
     display: flex;
     flex-direction: column;

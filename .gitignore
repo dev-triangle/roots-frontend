@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+/roots-backend
 # production
 /build
 

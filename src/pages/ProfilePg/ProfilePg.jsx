@@ -17,7 +17,7 @@ const ProfilePg = () => {
     <MainLayout>
       <div className="profile__pg_main">
       <CustomTitle title="Profile"/>
-      <h1 className='photo_gallery_head'>My Profile</h1>
+      <h1 className='profile__pg_title'>My Profile</h1>
       <div className="profile__box">
         <p>Roots ID: RT{user.id}</p>
         <p>Name: {user.username}</p>

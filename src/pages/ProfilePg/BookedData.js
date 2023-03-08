@@ -17,7 +17,7 @@ const BookedData = () => {
   }, []);
   return (
     <div className="bookings__done_main">
-      <h1 className="photo_gallery_head">Bookings</h1>
+      <h1 className="profile__pg_title">Bookings</h1>
       <div className="registered__card">
         {bookings.map((booking, index) =>
           booking.user_foreign === parseInt(userId) ? (
