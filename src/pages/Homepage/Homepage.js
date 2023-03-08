@@ -8,6 +8,7 @@ import Stars from "../../components/Stars/Stars";
 import Aos from "aos";
 import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
 import CustomTitle from "../../utils/CustomTitle";
+import Teams from '../../components/Teams/Teams'
 const Homepage = () => {
   useEffect(()=>{
     Aos.init({duration:700})
@@ -41,6 +42,7 @@ const Homepage = () => {
        
       </div>
       <PhotoGallery/>
+      <Teams/>
       </Stars>
     </MainLayout>
   );
