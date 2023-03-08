@@ -7,7 +7,7 @@ function TeamCard(props) {
         <div class="img">
             <img src={props.image} alt="demo"/>
         </div>
-        <div class="description card">
+        <div class="description">
             <span class="title">
                 {props.name}
             </span>
