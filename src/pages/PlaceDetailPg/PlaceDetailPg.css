@@ -231,7 +231,14 @@ h2{
   align-items: center;
   padding: 2rem;
 }
-
+.fest__header_main{
+  text-transform: capitalize;
+  font-size: 4rem;
+  font-weight: 600;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg,#fff,#40edf7);
+  -webkit-background-clip: text;
+}
 .destination__cards_contain {
   display: flex;
   flex-direction: row;

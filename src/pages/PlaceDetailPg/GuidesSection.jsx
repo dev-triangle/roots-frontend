@@ -12,7 +12,7 @@ const GuidesSection = ({ placeId }) => {
   }, []);
   return (
     <div className="guide__main_body">
-      <h2 className="photo_gallery_head">Guides</h2>
+      <h2 className="fest__header_main">Guides</h2>
       <div className="guides__cards">
         {guides.map((guide, index) =>
           guide.place_foreign === parseInt(placeId) ? (
