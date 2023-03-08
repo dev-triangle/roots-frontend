@@ -23,6 +23,7 @@ const FestivalCard = ({ festImage, festName, festDesc }) => {
         <div className="act__card_title title-white">
           <p>{festName}</p>
           <button
+            className="att__c_btn"
             onClick={() => {
               setOpen(true);
             }}
