@@ -20,31 +20,39 @@
 .attraction__card_body {
     display: flex;
     color: white;
-    background-color: #ffff;
+     height: 16rem;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 1rem;
-    background: rgb(63, 61, 106);
-    background: rgb(67, 67, 85);
-    background: linear-gradient(90deg, rgba(67, 67, 85, 1) 2%, rgba(2, 5, 14, 1) 46%, rgba(34, 44, 45, 1) 59%);
-    box-shadow: 1px 2px 26px 4px #7c7c7c;
+    cursor: pointer;
+    transition: 0.4s;
+    background: rgba(254, 245, 245, 0.09);
+    box-shadow: 5px 5px 30px 7px rgb(0 0 0 / 25%), -5px -5px 30px 7px rgb(0 0 0 / 22%);
+   
+    /* background: linear-gradient(90deg, rgba(67, 67, 85, 1) 2%, rgba(2, 5, 14, 1) 46%, rgba(34, 44, 45, 1) 59%); */
+    /* box-shadow: 1px 2px 26px 4px #7c7c7c; */
 }
 
 .attraction__card_body {
     display: flex;
-    background-color: #ffff;
     flex-direction: column;
     align-items: center;
     margin: 1rem;
 }
 
+.attraction__card_body :hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+
 .attraction__card_body img {
-    width: 80%;
+    width: 100%;
     height: 8rem;
-    border-radius: 20px;
-    margin-top: -4rem;
+    margin-top: -3rem;
+   
 }
 
 .attract__card_btns {
@@ -57,7 +65,7 @@
 
 .att__c_btn {
     background-color: transparent;
-    border: 2px solid #68d0e5;
+    border: 2px solid #009490;
     border-radius: 0.2rem;
     color: #b1c7ca;
     font-weight: bold;

@@ -68,6 +68,8 @@ const PlaceDetailPg = () => {
           )}
           </div>
         </div>
+        </div>
+        
 
         <div className="festivals__section"  data-aos="fade-left">
           <h2>Festivals</h2>
@@ -88,7 +90,7 @@ const PlaceDetailPg = () => {
         <Attractions/>
         <GuidesSection placeId={place_id}/>
 
-      </div>
+      
     </MainLayout>
   );
 };
