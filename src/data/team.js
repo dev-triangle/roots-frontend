@@ -1,4 +1,10 @@
-import { niranjana, navya, sanosh, achyuth } from "../assets/jpg/index";
+import {
+  niranjana,
+  navya,
+  sanosh,
+  achyuth,
+  lekshmi,
+} from "../assets/jpg/index";
 export const peoples = [
   {
     id: 1,
@@ -13,7 +19,7 @@ export const peoples = [
   {
     id: 3,
     name: "Lekshmi S",
-    image: "https://www.w3schools.com/howto/img_avatar.png",
+    image: lekshmi,
   },
   {
     id: 4,
