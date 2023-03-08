@@ -1,13 +1,14 @@
 import React from 'react'
 import './PlaceDetDialog.css'
 import { Dialog } from '@mui/material'
+
 function PlaceDetDialog({open,setOpen,handleClose,placeName,placeImage,placeDesc}) {
   return (
-    <Dialog
+    <Dialog   
     fullWidth={true}
     maxWidth={"md"}
     PaperProps={{
-      sx: { width: "100%", borderRadius: 5, m: 2, minHeight: "60vh" },
+      sx: { width: "100%",borderRadius: 2, m: 2, minHeight: "60vh" },
     }}
     open={open}
     onClose={handleClose}

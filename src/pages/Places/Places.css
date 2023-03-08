@@ -54,16 +54,16 @@
     place-content: center;
     place-items: center;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 .place__card::before {
     content: '';
     position: absolute;
     width: 100px;
-    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    /* background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255)); */
     height: 130%;
-    animation: rotBGimg 6s linear infinite;
+    /* animation: rotBGimg 6s linear infinite; */
     transition: all 0.2s linear;
 }
 
@@ -191,7 +191,7 @@
 .place__card__cbt i::before {
     content: '';
     position: absolute;
-    border: 2px solid #546dc7;
+    /* border: 2px solid #546dc7; */
     width: 7px;
     height: 4px;
     top: -3.5px;
@@ -210,7 +210,7 @@
 .place__card__cbt i::after {
     content: '';
     position: absolute;
-    border: 2px solid #546dc7;
+    /* border: 2px solid #546dc7; */
     width: 7px;
     height: 4px;
     bottom: -3.5px;
