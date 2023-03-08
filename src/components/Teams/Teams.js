@@ -6,7 +6,12 @@ const Teams = () => {
   return (
     <div className='team__container'>
         <h1 className='team__header'>Teams</h1>
-        <TeamCard/>
+        {peoples.map((person,index)=>{
+          return(
+            <TeamCard key={index} name={person.name} image={person.image}/>
+          )
+        })}
+        
     </div>
   )
 }
