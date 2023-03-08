@@ -5,6 +5,7 @@ import PlaceCard from './PlaceCard'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { baseUrl } from '../../utils/urls'
+import CustomTitle from '../../utils/CustomTitle'
 const Places = () => {
   const[places,setPlaces]=useState([])
   useEffect(()=>{
@@ -16,8 +17,9 @@ const Places = () => {
   },[])
     return (
     <MainLayout>
+      <CustomTitle title="Explore"/>
       <div className="places__main_container">
-        <h1 className="places__main__heading">Places</h1>
+        <h1 className="photo_gallery_head">Places</h1>
         <div className="places__cards_container">
           {places.map((place,index)=>{
             return(

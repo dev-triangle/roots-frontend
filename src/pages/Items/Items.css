@@ -13,8 +13,22 @@
   }
 
   .items__card_container{
-    padding: 3rem;
+
+    padding: 7rem;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 3rem;
+    
+   
   }
+  .item__card_img:hover {
+    transform: scale(1.2, 1.2);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      10px 10px 30px 15px rgba(0,0,0,0.22);
+  }
+
   .button_container_item_card{
     display: flex;
     flex-direction: row;
@@ -33,21 +47,31 @@
     font-weight: 500;
     margin-top: auto;
     padding: 0.55rem 1.5rem;
+    
   }
   .item__card__body{
-    height: 13rem;
-    width: 16rem;
+    height: 18rem;
+    width: 14rem;
     display: flex;
     border-radius: 10px;
     align-items: center;
     flex-direction: column;
     padding: 1rem;
-    background-color: #ffff;
+    background: rgba(254, 245, 245, 0.09) 10px;
+    backdrop-filter: blur(39px);
+    border: 3px solid ;
+    /* linear-gradient(#009490,#FEFEFE); */
+    border-image:   linear-gradient(to right,#009490,#FEFEFE)5; 
     gap: 1rem;
+    color: aliceblue;
+    box-shadow: 5px 5px 30px 7px rgb(0 0 0 / 25%), -5px -5px 30px 7px rgb(0 0 0 / 22%);
+    
   }
   .item__card_img{
-    width: 5rem;
-    height: 5rem;
+    width: 10rem;
+    height: 10rem;
+    cursor: pointer;
+    transition: 0.4s;
   }
   .item__btns{
     display: flex;
@@ -55,4 +79,18 @@
     align-items: center;
     flex-direction: row;
     gap: 10px;
+    padding: 10px;
+     
+  }
+  .item__view_btn{
+   background-color: #006360;
+   border: none;
+   color: white;
+   padding: 6px;
+  }
+  .item__purchase_btn{
+  background-color: #006360;
+  border: none;
+  color: white;
+  padding: 6px;
   }

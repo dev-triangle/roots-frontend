@@ -1,45 +1,182 @@
-.loader__container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+/* #loader-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader5 {
+    display: block;
+    height: 54px;
+    position: relative;
+    width: 54px;
+	
+}
+#loader5 span {
+	
+    display: block;
+    float: left;
+    height: 25px;
+    margin: 1px;
+    width: 25px;
+  opacity:1;
+  -webkit-animation:  fadebox 1s linear infinite; -moz-animation:  fadebox 1s linear infinite; animation:  fadebox 1s linear infinite;
+	}
+#loader5 span:nth-child(1) {
+	 background: #21b8cb none repeat scroll 0 0;
+	 
+	 -webkit-animation-delay:0s;
+	 -moz-animation-delay:0s;
+	 animation-delay:0s;
+	}
+#loader5 span:nth-child(2) {
+	 background: #0b8b8b none repeat scroll 0 0;
+	 
+	-webkit-animation-delay:0.2s;
+	  -moz-animation-delay:0.2s;
+	 animation-delay:0.2s;
+	}
+#loader5 span:nth-child(3) {
+	 background: #86cece none repeat scroll 0 0;
+	 
+	-webkit-animation-delay:0.6s;
+	  -moz-animation-delay:0.6s;
+	 animation-delay:0.6s;
+	}
+#loader5 span:nth-child(4) {
+	 background: #34A853 none repeat scroll 0 0;
+	 
+	  -webkit-animation-delay:0.4s;
+	  -moz-animation-delay:0.4s;
+	 animation-delay:0.4s;
+	}		
+	
+			
+
+@-webkit-keyframes fadebox {
+	   0%{
+		-webkit-opacity:0;
+		-moz-opacity:0;
+		opacity:0;
+		}
+	100%{
+		-webkit-opacity:1;
+		-moz-opacity:1;
+		opacity:1;
+		}
+	}
+@-moz-keyframes fadebox {
+	   0%{
+		-webkit-opacity:0;
+		-moz-opacity:0;
+		opacity:0;
+		}
+	100%{
+		-webkit-opacity:1;
+		-moz-opacity:1;
+		opacity:1;
+		}
+	}				
+@keyframes fadebox{
+      0%{
+		-webkit-opacity:0;
+		-moz-opacity:0;
+		opacity:0;
+		}
+	100%{
+		-webkit-opacity:1;
+		-moz-opacity:1;
+		opacity:1;
+		}
+}				 */
+
+
+
+
+.jelly-triangle {
+	--uib-size: 2.8rem;
+	--uib-speed: 1.75s;
+	--uib-color: #183153;
+	position: relative;
+	height: var(--uib-size);
+	width: var(--uib-size);
+	filter: url('#uib-jelly-triangle-ooze');
+  }
   
-  }
-  .loader{
-    --color1: #094C83;
-    --color2:  #21B8CB;
-    --color3:  #91C3E8;
-    --color4:  #278A8C;
-    --color5: #05B7B1;
-    --_mask: no-repeat radial-gradient(#000 68%,#0000 71%);
-    width: 200px;
-    aspect-ratio: 1;
-    background: conic-gradient(from 36deg,
-      var(--color1)0%,var(--color1)20%,
-      var(--color2)20%,var(--color2)40%,
-      var(--color3)40%,var(--color3)60%,
-      var(--color4)60%,var(--color4)80%,
-      var(--color5)80%)
-      no-repeat;
-    /*background-size: 200% 200%;*/
-    -webkit-mask: var(--_mask),var(--_mask),var(--_mask),var(--_mask),var(--_mask);
-    -webkit-mask-size: 25% 25%;
-    animation:
-      
-      load 3s infinite ease-in-out;
+  .jelly-triangle__dot,
+  .jelly-triangle::before,
+  .jelly-triangle::after {
+	content: '';
+	position: absolute;
+	width: 33%;
+	height: 33%;
+	background: var(--uib-color);
+	border-radius: 100%;
+	box-shadow: 0 0 20px rgba(18, 31, 53, 0.3);
   }
   
-  @keyframes load{
-    0%, 100%{-webkit-mask-position:50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%;}
-    20%{-webkit-mask-position:100% 38%, 82% 100%, 18% 100%, 0% 38%, 50% 0%;}
-    40%{-webkit-mask-position:82% 100%, 18% 100%, 0% 38%, 50% 0%, 100% 38%;}
-    60%{-webkit-mask-position:18% 100%, 0% 38%, 50% 0%, 100% 38%, 82% 100%;}
-    80%{-webkit-mask-position:0% 38%, 50% 0%, 100% 38%, 82% 100%, 18% 100%;}
+  .jelly-triangle__dot {
+	top: 6%;
+	left: 30%;
+	animation: grow7132 var(--uib-speed) ease infinite;
   }
-  @keyframes back{
-    0%, 100%{background-position: 0 0;}
-    25%{background-position: 0 100%;}
-    50%{background-position: 100% 100%;}
-    75%{background-position: 100% 0;}
+  
+  .jelly-triangle::before {
+	bottom: 6%;
+	right: 0;
+	animation: grow7132 var(--uib-speed) ease calc(var(--uib-speed) * -0.666)
+	  infinite;
+  }
+  
+  .jelly-triangle::after {
+	bottom: 6%;
+	left: 0;
+	animation: grow7132 var(--uib-speed) ease calc(var(--uib-speed) * -0.333)
+	  infinite;
+  }
+  
+  .jelly-triangle__traveler {
+	position: absolute;
+	top: 6%;
+	left: 30%;
+	width: 33%;
+	height: 33%;
+	background: var(--uib-color);
+	border-radius: 100%;
+	animation: triangulate6214 var(--uib-speed) ease infinite;
+  }
+  
+  .jelly-maker {
+	width: 0;
+	height: 0;
+	position: absolute;
+  }
+  
+  @keyframes triangulate6214 {
+	0%,
+	100% {
+	  transform: none;
+	}
+  
+	33.333% {
+	  transform: translate(120%, 175%);
+	}
+  
+	66.666% {
+	  transform: translate(-95%, 175%);
+	}
+  }
+  
+  @keyframes grow7132 {
+	0%,
+	100% {
+	  transform: scale(1.5);
+	}
+  
+	20%,
+	70% {
+	  transform: none;
+	}
   }

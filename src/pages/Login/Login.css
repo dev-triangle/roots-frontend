@@ -8,7 +8,9 @@
 .su__blank_space{
     width: 50vw;
     height: 90vh;
-    background: #3B5B6F;
+    /* background: #3B5B6F; */
+    background: rgba(217, 217, 217, 0.5);
+    opacity: 0.2; 
 }
 .su__form_container{
     width: 50vw;
@@ -16,11 +18,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1C3747;
+    /* background-color: #1C3747; */
+    background: linear-gradient(104.98deg,#1D394A 2.26%, #0C1E27 93.54%);
 }
 .su__and_continue{
-    color: blue;
+    color:  #006360;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 .su__welcome_text{
     color: #ffff;
@@ -40,10 +44,17 @@
 .su__submit_button{
     width: 15rem;
     height: 3rem;
-    background: #006DD1;
+    background: #006360;
     box-shadow: 4px 4px 12px #000000, inset 4px 4px 14px rgba(255, 255, 255, 0.25);
     border-radius: 20px;
     color: aliceblue;
+    border: none; 
+    box-shadow: 4px 4px 12px #05182D, inset 4px 4px 14px rgba(255, 255, 255, 0.25);
+}
+
+.su__submit_button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
 }
 .su__form_container{
     display: flex;
@@ -51,6 +62,7 @@
     gap: 1rem;
     align-items: center;
     justify-content: center;
+    
 }
 
 

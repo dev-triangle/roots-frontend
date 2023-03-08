@@ -1,39 +1,127 @@
-  .atrcations__cards_container{
+.atrcations__cards_container {
     display: flex;
     width: 100%;
     padding: 3rem;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
-  }
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+}
 
-  .attractions__section{
+.attractions__section {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .attraction__card_body{
+    margin-top: 3rem;
+}
+
+.attraction__card_body {
     display: flex;
-   width: 320px;
-    /* height: 240px; */
-    background-color: #ffff;
+    color: white;
+     height: 16rem;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    background: rgba(254, 245, 245, 0.09);
+    box-shadow: 5px 5px 30px 7px rgb(0 0 0 / 25%), -5px -5px 30px 7px rgb(0 0 0 / 22%);
+   
+    /* background: linear-gradient(90deg, rgba(67, 67, 85, 1) 2%, rgba(2, 5, 14, 1) 46%, rgba(34, 44, 45, 1) 59%); */
+    /* box-shadow: 1px 2px 26px 4px #7c7c7c; */
+}
+
+.attraction__card_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+
+.attraction__card_body :hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
   }
-  
-  .attraction__card_body img{
-    width: 270px;
-    height: 142px;
-    border-radius: 20px;
-  }
-  .attract__card_btns{
+
+.attraction__card_body img {
+    width: 100%;
+    height: 8rem;
+    margin-top: -3rem;
+   
+}
+
+.attract__card_btns {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
-  }
+}
+
+.att__c_btn {
+    background-color: transparent;
+    border: 2px solid #009490;
+    border-radius: 0.2rem;
+    color: #b1c7ca;
+    font-weight: bold;
+    padding: 0.5rem;
+    position: relative;
+    text-transform: uppercase;
+    transition: ease-in 0.3s;
+}
+
+.att__c_btn:hover,
+.att__c_btn:active,
+.att__c_btn:focus {
+    background: radial-gradient(#909b9e, #4cc9f0);
+    box-shadow: 0px 0px 0.3rem #00b4d8;
+    color: #16191a;
+}
+
+.att__c_btn::before {
+    bottom: -0.5rem;
+    content: "";
+    left: 0;
+    position: absolute;
+}
+
+.att__c_btn::after {
+    top: -0.5rem;
+    content: "";
+    left: 0;
+    position: absolute;
+}
+
+.att__c_btn:hover::before {
+    animation: ease-in moveBar 0.6s forwards reverse;
+}
+
+.att__c_btn:hover::after {
+    animation: ease-in moveBar 0.6s forwards;
+}
+
+@keyframes moveBar {
+    0% {
+        width: 0;
+    }
+    1% {
+        border: 1px solid #00b4d8;
+    }
+    40% {
+        width: 2rem;
+    }
+    99% {
+        border: 1px solid #00b4d8;
+        left: 99%;
+    }
+    100% {
+        border: none;
+        left: 100%;
+        width: 0;
+    }
+}
