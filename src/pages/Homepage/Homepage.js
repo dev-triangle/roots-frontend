@@ -25,7 +25,7 @@ const Homepage = () => {
             </div>
             <br></br>
             <div className="home__intro" data-aos="zoom-in">
-             To Root the world
+            Discover the Hidden Gems of Tradition and Culture with Locals 
             </div>
             <Button className="home__button" onClick={()=>{
               navigate('/places')

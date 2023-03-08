@@ -13,6 +13,7 @@ const FestivalCard = ({ festImage, festName, festDesc }) => {
         open={open}
         setOpen={setOpen}
         handleClose={handleClose}
+        festName={festName}
       />
 
       <div className="act__card 1">

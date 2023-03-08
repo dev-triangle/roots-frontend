@@ -1,10 +1,10 @@
-import React from 'react'
-import { Dialog } from '@mui/material'
-import './ItemsDetDialog.css'
-const ItemsDetDialog = ({open,handleClose,pName,itemDesc}) => {
+import React from "react";
+import { Dialog } from "@mui/material";
+import "./ItemsDetDialog.css";
+const ItemsDetDialog = ({ open, handleClose, pName, itemDesc }) => {
   return (
     <div>
-        <Dialog
+      <Dialog
         fullWidth={true}
         maxWidth={"md"}
         PaperProps={{
@@ -15,12 +15,13 @@ const ItemsDetDialog = ({open,handleClose,pName,itemDesc}) => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <h1 className='item_head'>{pName}</h1>
-        <p className='item_desc'>{itemDesc}</p>
-
-        </Dialog>
+        <div className="items__dialog_container">
+          <h1 className="item_head">{pName}</h1>
+          <p className="item_desc">{itemDesc}</p>
+        </div>
+      </Dialog>
     </div>
-  )
-}
+  );
+};
 
-export default ItemsDetDialog
+export default ItemsDetDialog;
