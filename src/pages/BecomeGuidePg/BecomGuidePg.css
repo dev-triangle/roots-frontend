@@ -10,7 +10,7 @@
 
 .form_guide>select,
 .form_guide>input {
-    width: 80%;
+    margin: .2rem;
     width: 20rem;
     height: 3rem;
     border-radius: 1rem;
