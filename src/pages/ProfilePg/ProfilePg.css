@@ -83,6 +83,44 @@
     margin-left: 0.25rem;
     color: #9EEFB3;
 }
+.card{
+    align-items: flex-start;
+    background-color: #041c2c;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    width: 450px;
+}
+.registered__card{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    padding: 3rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.reg__cardbody{
+    width:fit-content;
+    height: 10rem;
+    border-color: #3f85ad;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    background: #3f85ad;
+    border-radius: 1rem;
+}
+.profile__cards_container {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    padding: 3rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 
 @media screen and (max-width: 800px) {
     .profile__box {
