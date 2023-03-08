@@ -2,44 +2,38 @@ import React, { useEffect, useState } from "react";
 import "./ProfilePg.css";
 import { baseUrl } from "../../utils/urls";
 import axiosInstance from "../../auth/authHandler";
-import { Card } from "@mui/material";
 const BookedData = () => {
   const [bookings, setBookings] = useState([]);
-  useEffect(()=>{
-    axiosInstance.get(`${baseUrl}/booking/`).then((response)=>{
-      setBookings(response.data)
-    })
-    
-  },[])
+  const [userId, setUserId] = useState(0);
+  useEffect(() => {
+    axiosInstance.get(`${baseUrl}/booking/`).then((response) => {
+      setBookings(response.data);
+    });
+  }, []);
+  useEffect(() => {
+    axiosInstance.get(`${baseUrl}/current-user/`).then((response) => {
+      setUserId(response.data.id);
+    });
+  }, []);
   return (
-    <div>
-      <h1>Bookings</h1>
-      {/* <div className="booked__data">
-        {bookings.map((booking, index) =>
-          booking.user_foreign === parseInt(window.localStorage.getItem("user_id")) ? (
-            <Card key={index}>
-              <div className="profile__booking_card">
-                <img src={booking.image} alt="" />
-                <p>Booking ID: {booking.id}</p>
-                <p>Booking Date: {booking.date}</p>
-              </div>
-            </Card>
-          ) : null
-        )}
-      </div> */}
+    <div className="bookings__done_main">
+      <h1 className="photo_gallery_head">Bookings</h1>
       <div className="registered__card">
-       {bookings.map((booking,index)=>{
-        return(
-          <div className="reg__cardbody">
-              <h4>
+        {bookings.map((booking, index) =>
+          booking.user_foreign === parseInt(userId) ? (
+            <div className="reg__cardbody" key={index}>
+              <img className="reg__content_img" src={booking.image} alt=" " />
+              <div className="reg__booked_content">
+              <p className="reg__content_p">
                 Booking ID: <span>{booking.id}</span>
-              </h4>
-              <p>
+              </p>
+              <p className="reg__content_p">
                 Date: <span>{booking.date}</span>
               </p>
+              </div>
             </div>
-        )
-       })}
+          ) : null
+        )}
       </div>
     </div>
   );

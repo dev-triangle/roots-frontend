@@ -39,7 +39,7 @@ const Contact = () => {
       <div className="su__main" data-aos="zoom-in">
 
 
-      <p className="contact__main_title">Contact</p>
+      <p className="photo_gallery_head">Contact</p>
      
         <div className="su__form_container">
           <p className="contact_heading">
