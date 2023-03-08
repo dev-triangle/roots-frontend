@@ -55,7 +55,7 @@ const PlaceDetailPg = () => {
        
 
         <div className="place__activites">
-          <h2>Destinations</h2>
+          <h2 className="photo_gallery_head">Destinations</h2>
           <div className="destination__cards_contain" data-aos="zoom-in">
           {activities.map((activity, index) =>
             activity.place_foreign === parseInt(place_id) ? (
@@ -72,7 +72,7 @@ const PlaceDetailPg = () => {
         
 
         <div className="festivals__section"  data-aos="fade-left">
-          <h2>Festivals</h2>
+          <h2 className="photo_gallery_head">Festivals</h2>
           <div className="festivals__container">
             {festivals.map((fest, index) =>
               fest.place_foreign === parseInt(place_id) ? (

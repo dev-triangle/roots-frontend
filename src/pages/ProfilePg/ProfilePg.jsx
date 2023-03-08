@@ -6,7 +6,6 @@ import PurchaseData from './PurchaseData'
 import axiosInstance from '../../auth/authHandler'
 import { baseUrl } from '../../utils/urls'
 import CustomTitle from '../../utils/CustomTitle'
-import PlaceCard from '../Places/PlaceCard'
 const ProfilePg = () => {
   const[user,setUser]=useState({})
   useEffect(()=>{
@@ -17,7 +16,7 @@ const ProfilePg = () => {
   return (
     <MainLayout>
       <CustomTitle title="Profile"/>
-      
+      <h1>My Profile</h1>
       <div className="profile__box">
         <p>Roots ID: RT{user.id}</p>
         <p>Name: {user.username}</p>
