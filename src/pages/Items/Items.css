@@ -53,13 +53,14 @@
 }
 
 .item__card__body {
-    height: 18rem;
-    width: 14rem;
+    height: 20rem;
+    width: 16rem;
+    justify-content: center;
     display: flex;
     border-radius: 10px;
     align-items: center;
     flex-direction: column;
-    padding: 1rem;
+    /* padding: 1rem; */
     background: rgba(254, 245, 245, 0.09) 10px;
     backdrop-filter: blur(39px);
     border: 3px solid;
@@ -82,8 +83,8 @@
     width: 100%;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
-    padding: 10px;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .item__view_btn {
