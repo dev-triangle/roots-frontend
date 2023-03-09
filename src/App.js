@@ -26,6 +26,7 @@ function App() {
       });
     }
   }, []);
+  console.log("%cMade with 💙 by Tech Minds", "color:#3F7CBF; font-size:30px");
   return (
     <div className="App">
       <Suspense fallback={<Loader />}>
